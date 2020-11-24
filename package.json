@@ -20,7 +20,7 @@
     "gatsby-source-filesystem": "^1.5.39",
     "gatsby-transformer-remark": "^1.7.44",
     "gatsby-transformer-sharp": "^1.6.27",
-    "highlight.js": "^9.2.0",
+    "highlight.js": "^10.1.2",
     "history": "^4.7.2",
     "jquery": "^3.3.1",
     "js-yaml": "^3.12.0",
