@@ -22,7 +22,7 @@
   }
 }
 
-// Spring 2021 Home Page
+// Spring 2019 Home Page
 
 .header__container {
   display: flex;
@@ -592,21 +592,21 @@
   }
 }
 
-.infosession__button--sp21grey {
+.infosession__button--sp20grey {
   background-color: #EAEAEA;
-  color: #000000;
+  color: rgb(18, 84, 98);
 
   &:hover {
     background-color: #DDDDDD;
   }
 }
 
-.infosession__button--sp21blue {
-  background-color: #0038C9;
+.infosession__button--sp20 {
+  background-color: #F26530;
   color: white;
 
   &:hover {
-    background-color: #002B9B;
+    background-color: rgb(233, 68, 7);
   }
 }
 
