@@ -2,7 +2,7 @@ import React from 'react';
 import Hero from '../components/Hero';
 import Officer from '../components/Officer';
 
-export default class About extends React.Component {
+export default class AboutPage extends React.Component {
   constructor(props) {
     super(props);
   }

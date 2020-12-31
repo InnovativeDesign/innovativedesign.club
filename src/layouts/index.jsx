@@ -282,6 +282,7 @@ export default class RootLayout extends React.Component {
           <link href="/pace.css" rel="stylesheet" />
         </Helmet>
 
+        {/* Ternary for home page */}
         {this.props.location.pathname === "/" ?
           <div>
             <Navbar type="sp20" />
@@ -328,9 +329,10 @@ export default class RootLayout extends React.Component {
                   <Link to="/apply" className="infosession__button infosession__button--sp20">
                     Apply to join us
                   </Link>
-                  <Link to="/watch" className="infosession__button infosession__button--sp20grey">
+                  {/*Removed watch button*/}
+                  {/* <Link to="/watch" className="infosession__button infosession__button--sp20grey">
                     Watch
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
             </div>

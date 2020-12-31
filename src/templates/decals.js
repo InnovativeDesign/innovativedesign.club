@@ -7,7 +7,7 @@ import ApplyWidget from '../components/ApplyWidget';
 import $ from 'jquery';
 import _ from 'lodash';
 
-export default class Index extends React.Component {
+export default class DecalsPage extends React.Component {
   constructor(props) {
     super(props);
   }

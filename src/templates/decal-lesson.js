@@ -3,7 +3,7 @@ import React from 'react';
 import $ from 'jquery';
 import _ from 'lodash';
 
-export default class Index extends React.Component {
+export default class DecalLessonsPage extends React.Component {
   constructor(props) {
     super(props);
   }

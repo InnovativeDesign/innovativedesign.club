@@ -12,21 +12,32 @@ import { Helmet } from 'react-helmet';
 //   name: 'Contact',
 //   slug: 'contact',
 // }
+
+/* To add page
+    1. add name and slug to PAGES below
+    2. Add the .md page. slug => slug.md
+    3. in templates, add the thing
+ */
+
 const PAGES = [
 {
-  name: 'Club',
-  slug: 'club'
+  name: 'About',
+  slug: 'about'
 }, {
   name: 'DeCals',
   slug: 'decals'
 }, {
-  name: 'Our Team',
-  slug: 'about'
+  name: 'Events',
+  slug: 'events'
 }, {
-  name: 'Extension',
-  slug: 'extension'
+  name: 'Chapters',
+  slug: 'chapters'
+}, {
+  name: 'Apply',
+  slug: 'apply'
 }
 ];
+
 
 export default class Navbar extends React.Component {
   constructor(props) {
@@ -47,47 +58,6 @@ export default class Navbar extends React.Component {
 
   render() {
     const { type } = this.props;
-    if (type === 'sp20') {
-      return (
-        <div
-          className={classNames("nav", "sp20", {
-            "nav--open": this.state.navOpen
-          })}
-        >
-          <div className="nav__wrapper">
-            <Link className="nav__item nav__logo sp20" to='/'>
-              <img src="/img/logo__icon--blue.svg"/>
-            </Link>
-            <div
-              className={classNames("nav__item", "nav__hamburger", "sp20", {
-                "nav__hamburger--active": this.state.navOpen
-              })}
-              onClick={this._handleHamburger}
-            >
-              <div className="hamburger__bar--sp20 bar--1"></div>
-              <div className="hamburger__bar--sp20 bar--2"></div>
-            </div>
-            <div className="nav__links">
-              {PAGES.map((page) => {
-                return (
-                  <Link
-                    className="nav__item nav__link sp20"
-                    to={`/${page.slug}`}
-                    onClick={() => this._handleHamburger()}
-                    key={page.slug}
-                  >
-                    {page.name}
-                  </Link>
-                );
-              })}
-              <Link className="nav__item nav__cta sp20" to='/requests/'>
-                Submit a Request
-              </Link>
-            </div>
-          </div>
-        </div>
-      );
-    } else {
       return (
         <div
           className={classNames("nav", {
@@ -96,7 +66,7 @@ export default class Navbar extends React.Component {
         >
           <div className="nav__wrapper">
             <Link className="nav__item nav__logo" to='/'>
-              <img src="/img/logo__icon.svg"/>
+              <img src="/img/logo__icon--blue.svg"/>
             </Link>
             <div
               className={classNames("nav__item", "nav__hamburger", {
@@ -120,13 +90,13 @@ export default class Navbar extends React.Component {
                   </Link>
                 );
               })}
-              <Link className="nav__item nav__cta" to='/requests/'>
+              {/* DEPRECATED: SUBMIT A REQUEST BUTTON */}
+              {/* <Link className="nav__item nav__cta" to='/requests/'>
                 Submit a Request
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>
       );
-    }
   }
 }
