@@ -323,14 +323,14 @@ export default class RootLayout extends React.Component {
                   Innovative Design is UC Berkeley’s premier creative agency. We are designers, photographers, and web developers together in a mission to Make Berkeley Beautiful.
                 </p>
                 <div className="campaign_overlay__buttons">
-                  <Link to="/club" className="infosession__button infosession__button--sp20grey">
+                  <Link to="/club" className="infosession__button infosession__button--sp21grey">
                     See our work
                   </Link>
-                  <Link to="/apply" className="infosession__button infosession__button--sp20">
+                  <Link to="/apply" className="infosession__button infosession__button--sp21blue">
                     Apply to join us
                   </Link>
                   {/*Removed watch button*/}
-                  {/* <Link to="/watch" className="infosession__button infosession__button--sp20grey">
+                  {/* <Link to="/watch" className="infosession__button infosession__button--sp21grey">
                     Watch
                   </Link> */}
                 </div>
@@ -340,6 +340,7 @@ export default class RootLayout extends React.Component {
         : <Navbar/> }
 
         <div className="content">
+          {/* WILL CALL THE RESPECTIVE GATSBY PAGE OR INDEX.JS */}
           { this.props.children({ ...this.props, widgetMeta: this.props.data }) }
         </div>
       </div>
