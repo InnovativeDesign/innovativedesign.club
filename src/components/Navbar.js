@@ -35,6 +35,9 @@ const PAGES = [
 }, {
   name: 'Apply',
   slug: 'apply'
+}, {
+  name: 'Clients',
+  slug: 'clients'
 }
 ];
 
