@@ -4,8 +4,8 @@ import Script from 'react-load-script';
 import Hero from '../components/Hero';
 import ApplyWidget from '../components/ApplyWidget';
 
-export default class IndexPage extends React.Component {
-  _handleNetlifyLoad() {
+export default function IndexPage(props) {
+  function _handleNetlifyLoad() {
     const { netlifyIdentity } = window;
     if (netlifyIdentity) {
       netlifyIdentity.on('init', (user) => {
@@ -19,15 +19,14 @@ export default class IndexPage extends React.Component {
     netlifyIdentity.init();
   }
 
-  render() {
-    const {
-      row_slides: rowSlides
-    } = this.props.data.markdownRemark.frontmatter;
+  const {
+    row_slides: rowSlides
+  } = props.data.markdownRemark.frontmatter
 
-    return (<div className="index">
+  return (<div className="index">
       <Script
         url="https://identity.netlify.com/v1/netlify-identity-widget.js"
-        onLoad={() => this._handleNetlifyLoad()}
+        onLoad={() => _handleNetlifyLoad()}
       />
 
       <div className="hero">
@@ -35,11 +34,11 @@ export default class IndexPage extends React.Component {
         <div className="images__container images__container--center">
         </div>
         <div className="hero__center">
-          <h1>What we do</h1>
+          <h1>fuckoff</h1>
         </div>
       </div>
       
-    <ApplyWidget data={this.props.widgetMeta} />
+    <ApplyWidget data={props.widgetMeta} />
       <div className="row__container">
         {rowSlides.map((row) => {
           return (<div className={`row row__${row.type}`}>
@@ -53,8 +52,7 @@ export default class IndexPage extends React.Component {
           </div>);
         })}
       </div>
-    </div>);
-  }
+    </div>)
 }
 
 export const pageQuery = graphql`
