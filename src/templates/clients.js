@@ -1,25 +1,17 @@
 import React from 'react';
+ 
 
-import Hero from '../components/Hero';
+export default class ApplyPage extends React.Component {
+  constructor(props) {
+    super(props);
+  }
 
-export default class ClientsPage extends React.Component {
+  componentDidMount() {}
 
   render () {
 
     return (
-        <h1>client page in progress...</h1>
-    )
+      <p>clients page in progress</p>
+    );
   }
 }
-
-export const pageQuery = graphql`
-  query ExtensionQuery($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
-      html
-      frontmatter {
-        hero_heading
-        hero_subheading
-      }
-    }
-  }
-`;

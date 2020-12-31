@@ -11,7 +11,7 @@ export default class ApplyPage extends React.Component {
   render () {
 
     return (
-      <p>gey</p>
+      <p>apply page in progress</p>
     );
   }
 }
