@@ -33,11 +33,11 @@ const PAGES = [
   name: 'Chapters',
   slug: 'chapters'
 }, {
-  name: 'Apply',
-  slug: 'apply'
-}, {
   name: 'Clients',
   slug: 'clients'
+}, {
+  name: 'Apply',
+  slug: 'apply'
 }
 ];
 

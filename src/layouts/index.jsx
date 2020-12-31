@@ -6,6 +6,7 @@ import { Helmet } from 'react-helmet';
 import Link from 'gatsby-link';
 import Navbar from '../components/Navbar';
 import anime from "animejs";
+import Footer from '../components/Footer'
 
 import '../css/_index.scss';
 
@@ -342,6 +343,7 @@ export default class RootLayout extends React.Component {
         <div className="content">
           { this.props.children({ ...this.props, widgetMeta: this.props.data }) }
         </div>
+        <Footer />
       </div>
     </DocumentTitle>
     )

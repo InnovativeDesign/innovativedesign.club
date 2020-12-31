@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'gatsby-link';
 import FontAwesome from 'react-fontawesome';
 
+
 export default class Footer extends React.Component {
   render() {
     return <div className="nav__item nav__media">
