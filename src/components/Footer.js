@@ -1,34 +1,6 @@
 import React from 'react';
 import Link from 'gatsby-link';
-import FontAwesome from 'react-fontawesome';
-import { makeStyles, styled } from '@material-ui/core/styles';
-import { checkPropTypes } from 'prop-types';
-
-
-// export default class Footer extends React.Component {
-//   render() {
-//     return <div className="nav__item nav__media">
-//       <a href="https://www.facebook.com/InnovativeDesignUCB/" target="_blank">
-//         <FontAwesome
-//           className="media__icon fb"
-//           name="facebook"
-//         />
-//       </a>
-//       <a href="https://twitter.com/innodatcal" target="_blank">
-//         <FontAwesome
-//           className="media__icon twitter"
-//           name="twitter"
-//         />
-//       </a>
-//       <a href="https://www.instagram.com/innodatcal/" target="_blank">
-//         <FontAwesome
-//           className="media__icon ig"
-//           name="instagram"
-//         />
-//       </a>
-//     </div>
-//   }
-// }
+import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
   mainFooter: {
@@ -51,7 +23,7 @@ const useStyles = makeStyles({
     fontWeight: "100",
     '&:hover': {
       textDecoration: "none",
-      color: "#a9a9a9"
+      color: "#A9A9A9"
     }
   },
 })
@@ -93,14 +65,6 @@ export default function Footer() {
 
   return (
       <div className={classes.mainFooter}>
-        {/* < Link
-          className="nav__item nav__link"
-          to={`/${page.slug}`}
-          onClick={() => _handleHamburger()}
-          key={page.slug}
-        >
-          {page.name}
-        </Link > */}
 
         <div className="container">
           <div className="row">

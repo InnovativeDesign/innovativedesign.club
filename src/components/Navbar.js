@@ -1,17 +1,10 @@
 import React, { useState } from 'react';
+import { makeStyles } from '@material-ui/core/styles';
 import Link from 'gatsby-link';
 import Headroom from 'react-headroom';
 import classNames from 'classnames';
 import { Helmet } from 'react-helmet';
 
-// TODO: Replace with Gatsby source
-// , {
-//   name: 'Resources',
-//   slug: 'resources',
-// }, {
-//   name: 'Contact',
-//   slug: 'contact',
-// }
 
 /* To add page
     1. add name and slug to PAGES below
@@ -41,9 +34,33 @@ const PAGES = [
 }
 ];
 
-export default function Navbar(props) {
+const useStyles = makeStyles({
+  navItem: {
+    float: "right",
+    verticalAlign: "middle",
+    fontFamily: "Museo Sans",
+    fontWeight: "500",
+    fontSize: "14px",
+    lineHeight: "60px",
+    textDecoration: "none",
+  },
+  navLink: {
+    color: "#0038C9",
+    margin: "0 24px",
+    padding: "100px 0",
+    transition: "color 200ms ease-in-out",
+    '&:hover': {
+      textDecoration: "none",
+      color: "#A9A9A9"
+    }
+  }
+})
+
+
+
+export default function Navbar() {
+  const classes = useStyles()
   const [ navOpen, setNavOpen ] = useState(false)
-  const { types } = props
   function _handleHamburger(e) {
     if (e) e.preventDefault()
     setNavOpen(!navOpen)
@@ -62,18 +79,18 @@ export default function Navbar(props) {
           className={classNames("nav__item", "nav__hamburger", {
             "nav__hamburger--active": navOpen
           })}
-          // onClick={_handleHamburger}
+          onClick={_handleHamburger}
         >
           <div className="hamburger__bar bar--1"></div>
           <div className="hamburger__bar bar--2"></div>
         </div>
-        <div className="nav__links">
+        <div className={classes.navItem}>
           {PAGES.map((page) => {
             return (
               <Link
-                className="nav__item nav__link"
+                className={classes.navLink}
                 to={`/${page.slug}`}
-                // onClick={() => _handleHamburger()}
+                onClick={() => _handleHamburger()}
                 key={page.slug}
               >
                 {page.name}

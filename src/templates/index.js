@@ -23,7 +23,8 @@ export default function IndexPage(props) {
     row_slides: rowSlides
   } = props.data.markdownRemark.frontmatter
 
-  return (<div className="index">
+  return (
+    <div className="index">
       <Script
         url="https://identity.netlify.com/v1/netlify-identity-widget.js"
         onLoad={() => _handleNetlifyLoad()}
@@ -37,8 +38,8 @@ export default function IndexPage(props) {
           <h1>IN PROGRESS</h1>
         </div>
       </div>
-      
-    <ApplyWidget data={props.widgetMeta} />
+
+      <ApplyWidget data={props.widgetMeta} />
       <div className="row__container">
         {rowSlides.map((row) => {
           return (<div className={`row row__${row.type}`}>
@@ -52,7 +53,8 @@ export default function IndexPage(props) {
           </div>);
         })}
       </div>
-    </div>)
+    </div>
+  )
 }
 
 export const pageQuery = graphql`
