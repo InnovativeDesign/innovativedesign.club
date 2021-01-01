@@ -9,18 +9,28 @@ const useStyles = makeStyles({
     backgroundColor: "#0038C9",
     color: "white",
     bottom: "0",
-    width: "100%"
+    width: "100%",
+    textRendering: "optimizeLegibility",
+    WebkitFontSmoothing: "antialiased",
+    fontFamily: "DM Sans",
+    fontStyle: "normal",
+  },
+  logo: {
+    marginRight: "70px"
   },
   unstyledList: {
     listStyle: "none",
   },
   columnTitle: {
     color: "#FFFFFF",
-    fontWeight: "400"
+    fontWeight: "500"
   },
   listItem: {
     color: "#FFFFFF",
-    fontWeight: "100",
+    lineHeight: "40px",
+    paddingRight: "15%",
+    fontWeight: "400",
+    transition: "color 200ms ease-in-out",
     '&:hover': {
       textDecoration: "none",
       color: "#A9A9A9"
@@ -70,7 +80,7 @@ export default function Footer() {
           <div className="row">
             {/* LOGO*/}
             <div className="col">
-              <Link to = "/">
+              <Link to = "/" className = {classes.logo}>
                 <img src="/img/Footer-Logo.png" />
               </Link>
             </div>

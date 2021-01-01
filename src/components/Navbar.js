@@ -38,9 +38,9 @@ const useStyles = makeStyles({
   navItem: {
     float: "right",
     verticalAlign: "middle",
-    fontFamily: "Museo Sans",
+    fontFamily: "DM Sans",
     fontWeight: "500",
-    fontSize: "14px",
+    fontSize: "16px",
     lineHeight: "60px",
     textDecoration: "none",
   },
