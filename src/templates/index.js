@@ -6,6 +6,25 @@ import ApplyWidget from '../components/ApplyWidget';
 import { makeStyles, styled } from "@material-ui/core"
 
 const useStyles = makeStyles({
+  // SECTION 1
+  section1: {
+    flex: "3",
+    textAlign: "center",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    height: "calc(100vh - 60px)",
+    width: "100%",
+    padding: "0 20%",
+  },
+  buttonWrapper: {
+      display: "flex",
+      minWidth: "300px",
+      width: "70%",
+      justifyContent: "center",
+      paddingTop: "30px",
+  },
   linkButton: {
     margin: "10px",
     padding: "15px 30px",
@@ -22,6 +41,16 @@ const useStyles = makeStyles({
       color: props => props.textColor,
     },
   },
+  subText: {
+    width: "40vw",
+    color: "black",
+    fontSize: "22px",
+  },
+
+  // SECITON 2
+  section2: {
+
+  }
 })
 
 // BUTTON FOR THE FRONTPAGE
@@ -50,9 +79,18 @@ export default function IndexPage(props) {
 
   return (
     <div>
-      <div className={classes.buttonWrapper}>
-        <LinkButton to="/club" textColor="black" bcBefore ="#EAEAEA" bcAfter  ="#B6B6B6">See our work</LinkButton>
-        <LinkButton to="/apply" textColor="white" bcBefore ="#0038C9" bcAfter  ="#002177">Apply to join us</LinkButton>
+      <div className={classes.section1}>
+        <p className={classes.subText}>Innovative Design is UC Berkeley’s premier creative agency. 
+          We are designers, photographers, and web developers 
+          together in a mission to Make Berkeley Beautiful.
+        </p>
+        <div className={classes.buttonWrapper}>
+          <LinkButton to="/club" textColor="black" bcBefore ="#EAEAEA" bcAfter  ="#B6B6B6">See our work</LinkButton>
+          <LinkButton to="/apply" textColor="white" bcBefore ="#0038C9" bcAfter  ="#002177">Apply to join us</LinkButton>
+        </div>
+      </div>
+      <div className={classes.page2}>
+
       </div>
     </div>
   )
