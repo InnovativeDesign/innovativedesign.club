@@ -1,21 +1,38 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import $ from 'jquery';
 import DocumentTitle from 'react-document-title';
 import { Helmet } from 'react-helmet';
-import Link from 'gatsby-link';
 import Navbar from '../components/Navbar';
-import anime from "animejs";
 import Footer from '../components/Footer'
 import 'bootstrap/dist/css/bootstrap.css'
-
 import '../css/_index.scss';
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles({
+  body: {
+    backgroundColor: "grey",
+    height: "100%",
+    display: "flex",
+    flexDirection: "column"
+  },
+  wrapper: {
+    minHeight: "calc(100vh - 350px)"
+  },
+  root: {
+    textRendering: "optimizeLegibility",
+    WebkitFontSmoothing: "antialiased",
+    fontFamily: "DM Sans",
+    textDecoration: "none",
+  },
+})
 
 export default function RootLayout(props) {
+  const classes = useStyles()
   return (
     <DocumentTitle title='Innovative Design'>
-      <div id="root" className="root">
-      <Helmet>
+      <div className={classes.root}>
+        <div className={classes.wrapper}>
+    
+          <Helmet>
             <meta
               name="description"
               content="Cal's student run creative agency, on a mission to make Berkeley beautiful."
@@ -64,12 +81,12 @@ export default function RootLayout(props) {
               rel='stylesheet'
               type='text/css'
             />
-            <link 
-              rel="preconnect" 
+            <link
+              rel="preconnect"
               href="https://fonts.gstatic.com">
             </link>
-            <link 
-              href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" 
+            <link
+              href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
               rel="stylesheet">
             </link>
             <link
@@ -77,9 +94,9 @@ export default function RootLayout(props) {
               rel='stylesheet'
               type='text/css'
             />
-            <link 
-              href="https://fonts.googleapis.com/css?family=Rakkas&display=swap" 
-              rel="stylesheet"> 
+            <link
+              href="https://fonts.googleapis.com/css?family=Rakkas&display=swap"
+              rel="stylesheet">
             </link>
             <link
               rel="stylesheet"
@@ -89,22 +106,24 @@ export default function RootLayout(props) {
             <script src="/pace.js"></script>
             <link href="/pace.css" rel="stylesheet" />
           </Helmet>
-          
+    
           <Navbar />
           {/* PUT CONTENT INTO COMPONENTS */}
-          <div className="content">
-            { props.children({ ...props, widgetMeta: props.data }) }
+          <div className={classes.content}>
+            {props.children({ ...props, widgetMeta: props.data })}
           </div>
-          <Footer />
+        </div>
+        <Footer />
       </div>
     </DocumentTitle>
+
   )
 }
 
 export const pageQuery = graphql`
-  query WidgetMetaQuery {
-    allMarkdownRemark(
-      filter: { frontmatter: { templateKey: {regex: "/.*-widget/g"}} }
+query WidgetMetaQuery {
+  allMarkdownRemark(
+    filter: { frontmatter: { templateKey: {regex: "/.*-widget/g"}} }
     ) {
       edges {
         node {

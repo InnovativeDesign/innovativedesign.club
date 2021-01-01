@@ -3,8 +3,38 @@ import Link from 'gatsby-link';
 import Script from 'react-load-script';
 import Hero from '../components/Hero';
 import ApplyWidget from '../components/ApplyWidget';
+import { makeStyles, styled } from "@material-ui/core"
+import Button from "@material-ui/core"
+
+const useStyles = makeStyles({
+  button: {
+    margin: "10px",
+    padding: "15px 30px",
+    borderRadius: "3px",
+    textDecoration: "none",
+    transition: "0.2s ease all",
+    boxShadow: "0px 5px 10px rgba(0, 0, 0, 0.1)",
+    backgroundColor: "#0038C9",
+    color: "white",
+
+    '& Link': {
+      color: "black"
+    },
+    '& p': {
+      color: "white"
+    },
+  
+    '&:hover': {
+      textDecoration: "none",
+      backgroundColor: "#002174",
+    },
+
+
+  }
+})
 
 export default function IndexPage(props) {
+  const classes = useStyles()
   function _handleNetlifyLoad() {
     const { netlifyIdentity } = window;
     if (netlifyIdentity) {
@@ -18,41 +48,19 @@ export default function IndexPage(props) {
     }
     netlifyIdentity.init();
   }
-
-  const {
-    row_slides: rowSlides
-  } = props.data.markdownRemark.frontmatter
-
   return (
-    <div className="index">
-      <Script
-        url="https://identity.netlify.com/v1/netlify-identity-widget.js"
-        onLoad={() => _handleNetlifyLoad()}
-      />
+    <div>
 
-      <div className="hero">
-        <img className="blob__center blob--yellow" src="img/sp20/blob--yellow.svg" />
-        <div className="images__container images__container--center">
-        </div>
-        <div className="hero__center">
-          <h1>IN PROGRESS</h1>
-        </div>
+      <div className={classes.button}>
+        <Link to="/club" className="infosession__button infosession__button--sp21grey">
+          See our work
+        </Link>
+        <Link to="/apply">
+          Apply to join us
+        </Link>
+        <p>FUCK</p>
       </div>
-
-      <ApplyWidget data={props.widgetMeta} />
-      <div className="row__container">
-        {rowSlides.map((row) => {
-          return (<div className={`row row__${row.type}`}>
-            <img src={row.img} />
-            <p>{row.caption}</p>
-            <p>
-              <Link to={row.link}>
-                {row.link_text} &rarr;
-              </Link>
-            </p>
-          </div>);
-        })}
-      </div>
+      <p>gey</p>
     </div>
   )
 }

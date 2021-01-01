@@ -5,15 +5,10 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles({
   mainFooter: {
     padding: "3em",
+    height: "350px",
     position: "relative",
     backgroundColor: "#0038C9",
-    color: "white",
-    bottom: "0",
     width: "100%",
-    textRendering: "optimizeLegibility",
-    WebkitFontSmoothing: "antialiased",
-    fontFamily: "DM Sans",
-    fontStyle: "normal",
   },
   logo: {
     marginRight: "70px"

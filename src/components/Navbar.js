@@ -36,13 +36,12 @@ const PAGES = [
 
 const useStyles = makeStyles({
   navItem: {
+    position: "relative",
     float: "right",
     verticalAlign: "middle",
-    fontFamily: "DM Sans",
     fontWeight: "500",
     fontSize: "16px",
     lineHeight: "60px",
-    textDecoration: "none",
   },
   navLink: {
     color: "#0038C9",
