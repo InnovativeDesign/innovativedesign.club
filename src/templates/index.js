@@ -4,37 +4,36 @@ import Script from 'react-load-script';
 import Hero from '../components/Hero';
 import ApplyWidget from '../components/ApplyWidget';
 import { makeStyles, styled } from "@material-ui/core"
-import Button from "@material-ui/core"
 
 const useStyles = makeStyles({
-  button: {
+  linkButton: {
     margin: "10px",
     padding: "15px 30px",
     borderRadius: "3px",
     textDecoration: "none",
     transition: "0.2s ease all",
     boxShadow: "0px 5px 10px rgba(0, 0, 0, 0.1)",
-    backgroundColor: "#0038C9",
-    color: "white",
-
-    '& Link': {
-      color: "black"
-    },
-    '& p': {
-      color: "white"
-    },
+    backgroundColor: props => props.bcBefore,
+    color: props => props.textColor,
   
     '&:hover': {
       textDecoration: "none",
-      backgroundColor: "#002174",
+      backgroundColor: props => props.bcAfter,
+      color: props => props.textColor,
     },
-
-
-  }
+  },
 })
+
+// BUTTON FOR THE FRONTPAGE
+function LinkButton(props) {
+  const { color, ...other } = props
+  const LinkButtonClasses = useStyles(props)
+  return <Link className={LinkButtonClasses.linkButton} {...other}/>
+}
 
 export default function IndexPage(props) {
   const classes = useStyles()
+
   function _handleNetlifyLoad() {
     const { netlifyIdentity } = window;
     if (netlifyIdentity) {
@@ -48,19 +47,13 @@ export default function IndexPage(props) {
     }
     netlifyIdentity.init();
   }
+
   return (
     <div>
-
-      <div className={classes.button}>
-        <Link to="/club" className="infosession__button infosession__button--sp21grey">
-          See our work
-        </Link>
-        <Link to="/apply">
-          Apply to join us
-        </Link>
-        <p>FUCK</p>
+      <div className={classes.buttonWrapper}>
+        <LinkButton to="/club" textColor="black" bcBefore ="#EAEAEA" bcAfter  ="#B6B6B6">See our work</LinkButton>
+        <LinkButton to="/apply" textColor="white" bcBefore ="#0038C9" bcAfter  ="#002177">Apply to join us</LinkButton>
       </div>
-      <p>gey</p>
     </div>
   )
 }
