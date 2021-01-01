@@ -34,7 +34,7 @@ export default function IndexPage(props) {
         <div className="images__container images__container--center">
         </div>
         <div className="hero__center">
-          <h1>fuckoff</h1>
+          <h1>IN PROGRESS</h1>
         </div>
       </div>
       

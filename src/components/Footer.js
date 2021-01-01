@@ -44,6 +44,7 @@ const useStyles = makeStyles({
   },
   columnTitle: {
     color: "#FFFFFF",
+    fontWeight: "400"
   },
   listItem: {
     color: "#FFFFFF",
@@ -62,6 +63,7 @@ function Column(props) {
           <ul className = {props.classes.unstyledList}>
             {props.links.map((page) => (
               <li> 
+                {page.slug ? 
                 <Link
                 className={props.classes.listItem}
                 to={`/${page.slug}`}
@@ -69,6 +71,15 @@ function Column(props) {
                 >
                   {page.name}
                 </Link>
+                : 
+                <a 
+                  href = {page.href} 
+                  target= "_blank"
+                  className={props.classes.listItem}
+                  key = {page.slug}
+                >
+                    {page.name}
+                </a>}
               </li>
             ))}
           </ul>
@@ -121,15 +132,16 @@ export default function Footer() {
               classes = {classes}
             />
             {/* LINKS 5 */}
-            <div className="col">
-              <h4>Find Us</h4>
-              <ul>
-                <li>Facebook</li>
-                <li>Instagram</li>
-                <li>Behance</li>
-                <li>Twitter</li>
-              </ul>
-            </div>
+            <Column 
+              title = "Find Us"
+              links = {[
+                { name: "Facebook", href: "https://www.facebook.com/InnovativeDesignUCB"},
+                { name: "Instagram", href: "https://www.instagram.com/innodatcal/"},
+                { name: "Behance", href: "https://www.behance.net/InnoD"},
+                { name: "Twitter", href: "https://twitter.com/InnoDatCAL"},
+              ]}
+              classes = {classes}
+            />
           </div>
 
         </div>
