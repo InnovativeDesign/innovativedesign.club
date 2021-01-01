@@ -53,7 +53,17 @@ const useStyles = makeStyles({
       textDecoration: "none",
       color: "#A9A9A9"
     }
+  },
+  hamburgerBar: {
+    position: "absolute",
+    width: "100%",
+    height: "2px",
+    background: "grey",
+    transition: "transform 0.25s",
+    '&bar--1': {top: "4px"},
+    '&bar--2': {top: "14px"}
   }
+
 })
 
 
