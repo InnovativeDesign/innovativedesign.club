@@ -1,5 +1,5 @@
 // import React, { useState } from 'react';
-// import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 // import Link from 'gatsby-link';
 // import Headroom from 'react-headroom';
 // import classNames from 'classnames';
@@ -34,36 +34,34 @@
 // }
 // ];
 
-// const useStyles = makeStyles({
-//   navItem: {
-//     position: "relative",
-//     float: "right",
-//     verticalAlign: "middle",
-//     fontWeight: "500",
-//     fontSize: "16px",
-//     lineHeight: "60px",
-//   },
-//   navLink: {
-//     color: "#0038C9",
-//     margin: "0 24px",
-//     padding: "100px 0",
-//     transition: "color 200ms ease-in-out",
-//     '&:hover': {
-//       textDecoration: "none",
-//       color: "#A9A9A9"
-//     }
-//   },
-//   hamburgerBar: {
-//     position: "absolute",
-//     width: "100%",
-//     height: "2px",
-//     background: "grey",
-//     transition: "transform 0.25s",
-//     '&bar--1': {top: "4px"},
-//     '&bar--2': {top: "14px"}
-//   }
+const useStyles = makeStyles({
+  navItem: {
+    position: "relative",
+    float: "right",
+    verticalAlign: "middle",
+    fontWeight: "500",
+    fontSize: "16px",
+    lineHeight: "60px",
+  },
+  navLink: {
+    color: "#0038C9",
+    margin: "0 24px",
+    padding: "100px 0",
+    transition: "color 200ms ease-in-out",
+    '&:hover': {
+      textDecoration: "none",
+      color: "#A9A9A9"
+    }
+  },
+  hamburgerBar: {
+    position: "absolute",
+    width: "100%",
+    height: "2px",
+    background: "grey",
+    transition: "transform 0.25s",
+  }
 
-// })
+})
 
 
 
@@ -128,7 +126,7 @@ import { Helmet } from 'react-helmet';
 // }
 const PAGES = [
 {
-  name: 'Club',
+  name: 'ClubCHANGED',
   slug: 'club'
 }, {
   name: 'DeCals',
