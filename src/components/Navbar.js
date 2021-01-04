@@ -126,7 +126,7 @@ import { Helmet } from 'react-helmet';
 // }
 const PAGES = [
 {
-  name: 'ClubCHANGED',
+  name: 'ClubWITHIMPORT',
   slug: 'club'
 }, {
   name: 'DeCals',
