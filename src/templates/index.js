@@ -79,6 +79,10 @@ export default function IndexPage(props) {
 
   return (
     <div>
+      <Script
+        url="https://identity.netlify.com/v1/netlify-identity-widget.js"
+        onLoad={() => _handleNetlifyLoad()}
+      />
       <div className={classes.section1}>
         <p className={classes.subText}>Innovative Design is UC Berkeley’s premier creative agency. 
           We are designers, photographers, and web developers 
