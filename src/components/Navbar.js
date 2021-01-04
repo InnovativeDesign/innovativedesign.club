@@ -34,34 +34,34 @@ import { makeStyles } from '@material-ui/core/styles';
 // }
 // ];
 
-const useStyles = makeStyles({
-  navItem: {
-    position: "relative",
-    float: "right",
-    verticalAlign: "middle",
-    fontWeight: "500",
-    fontSize: "16px",
-    lineHeight: "60px",
-  },
-  navLink: {
-    color: "#0038C9",
-    margin: "0 24px",
-    padding: "100px 0",
-    transition: "color 200ms ease-in-out",
-    '&:hover': {
-      textDecoration: "none",
-      color: "#A9A9A9"
-    }
-  },
-  hamburgerBar: {
-    position: "absolute",
-    width: "100%",
-    height: "2px",
-    background: "grey",
-    transition: "transform 0.25s",
-  }
+// const useStyles = makeStyles({
+//   navItem: {
+//     position: "relative",
+//     float: "right",
+//     verticalAlign: "middle",
+//     fontWeight: "500",
+//     fontSize: "16px",
+//     lineHeight: "60px",
+//   },
+//   navLink: {
+//     color: "#0038C9",
+//     margin: "0 24px",
+//     padding: "100px 0",
+//     transition: "color 200ms ease-in-out",
+//     '&:hover': {
+//       textDecoration: "none",
+//       color: "#A9A9A9"
+//     }
+//   },
+//   hamburgerBar: {
+//     position: "absolute",
+//     width: "100%",
+//     height: "2px",
+//     background: "grey",
+//     transition: "transform 0.25s",
+//   }
 
-})
+// })
 
 
 
