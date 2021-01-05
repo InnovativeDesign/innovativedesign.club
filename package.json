@@ -27,6 +27,7 @@
     "history": "^4.7.2",
     "jquery": "^3.5.1",
     "js-yaml": "^3.14.1",
+    "jss": "^9.8.7",
     "lodash": "^4.17.20",
     "markdown-it": "^8.4.2",
     "markdown-it-abbr": "^1.0.3",
@@ -54,6 +55,7 @@
     "react-responsive-grid": "^0.3.0",
     "react-router": "^4.3.1",
     "sharp": "^0.20.7",
+    "slate": "^0.32.5",
     "superagent": "^3.8.3",
     "toml-js": "0.0.8",
     "typography": "^0.16.17"
