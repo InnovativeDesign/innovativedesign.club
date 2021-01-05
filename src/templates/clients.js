@@ -1,5 +1,5 @@
 import React from 'react';
- 
+
 
 // export default class ApplyPage extends React.Component {
 //   constructor(props) {
@@ -18,6 +18,6 @@ import React from 'react';
 
 export default function ClientPage() {
   return (
-    <p>CLIENT WITHOUT IMPORT</p>
+    <p>CLIENT: Functional component - No Material UI import.</p>
   )
 }

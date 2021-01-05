@@ -6,6 +6,7 @@ import Footer from '../components/Footer'
 import 'bootstrap/dist/css/bootstrap.css'
 import '../css/_index.scss';
 import { makeStyles } from '@material-ui/core/styles';
+import Script from 'react-load-script'
 
 const useStyles = makeStyles({
   body: {
@@ -27,10 +28,33 @@ const useStyles = makeStyles({
 
 export default function RootLayout(props) {
   const classes = useStyles()
+  console.log("PROPS CHILDREN")
+  console.log(props.children)
+  console.log("PROPS CHILDREN")
+  console.log(props.data)
+
+  function _handleNetlifyLoad() {
+    const { netlifyIdentity } = window;
+    if (netlifyIdentity) {
+      netlifyIdentity.on('init', (user) => {
+        if (!user) {
+          netlifyIdentity.on('login', () => {
+            document.location.href = '/admin/';
+          });
+        }
+      });
+    }
+    netlifyIdentity.init();
+  }
+
   return (
     <DocumentTitle title='Innovative Design'>
       <div className={classes.root}>
         <div className={classes.wrapper}>
+          <Script
+            url="https://identity.netlify.com/v1/netlify-identity-widget.js"
+            onLoad={() => _handleNetlifyLoad()}
+          />
     
           <Helmet>
             <meta

@@ -229,11 +229,11 @@ const useStyles = makeStyles({
   },
 })
 
-export default function IndexPage() {
+export default function IndexPage(props) {
   const classes = useStyles()
   return(
     <div className={classes.sectionONE}>
-      <p>STRAIGNT CAP</p>
+      <p>INDEX: Functional component - Material UI imported, called and used</p>
     </div>
   )
 }
