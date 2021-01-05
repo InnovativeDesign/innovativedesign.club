@@ -14,7 +14,7 @@ import { Helmet } from 'react-helmet';
 
 const PAGES = [
 {
-  name: 'AboutRIGHTVERSION',
+  name: 'AboutRfuckme',
   slug: 'about'
 }, {
   name: 'DeCals',
