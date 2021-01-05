@@ -5,53 +5,53 @@
 // import ApplyWidget from '../components/ApplyWidget';
 import { makeStyles, styled } from "@material-ui/core"
 
-// const useStyles = makeStyles({
-//   // SECTION 1
-//   section1: {
-//     flex: "3",
-//     textAlign: "center",
-//     display: "flex",
-//     flexDirection: "column",
-//     justifyContent: "center",
-//     alignItems: "center",
-//     height: "calc(100vh - 60px)",
-//     width: "100%",
-//     padding: "0 20%",
-//   },
-//   buttonWrapper: {
-//       display: "flex",
-//       minWidth: "300px",
-//       width: "70%",
-//       justifyContent: "center",
-//       paddingTop: "30px",
-//   },
-//   linkButton: {
-//     margin: "10px",
-//     padding: "15px 30px",
-//     borderRadius: "3px",
-//     textDecoration: "none",
-//     transition: "0.2s ease all",
-//     boxShadow: "0px 5px 10px rgba(0, 0, 0, 0.1)",
-//     backgroundColor: props => props.bcBefore,
-//     color: props => props.textColor,
+const useStyles = makeStyles({
+  // SECTION 1
+  section1: {
+    flex: "3",
+    textAlign: "center",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    height: "calc(100vh - 60px)",
+    width: "100%",
+    padding: "0 20%",
+  },
+  buttonWrapper: {
+      display: "flex",
+      minWidth: "300px",
+      width: "70%",
+      justifyContent: "center",
+      paddingTop: "30px",
+  },
+  linkButton: {
+    margin: "10px",
+    padding: "15px 30px",
+    borderRadius: "3px",
+    textDecoration: "none",
+    transition: "0.2s ease all",
+    boxShadow: "0px 5px 10px rgba(0, 0, 0, 0.1)",
+    backgroundColor: props => props.bcBefore,
+    color: props => props.textColor,
   
-//     '&:hover': {
-//       textDecoration: "none",
-//       backgroundColor: props => props.bcAfter,
-//       color: props => props.textColor,
-//     },
-//   },
-//   subText: {
-//     width: "40vw",
-//     color: "black",
-//     fontSize: "22px",
-//   },
+    '&:hover': {
+      textDecoration: "none",
+      backgroundColor: props => props.bcAfter,
+      color: props => props.textColor,
+    },
+  },
+  subText: {
+    width: "40vw",
+    color: "black",
+    fontSize: "22px",
+  },
 
-//   // SECITON 2
-//   section2: {
+  // SECITON 2
+  section2: {
 
-//   }
-// })
+  }
+})
 
 // // BUTTON FOR THE FRONTPAGE
 // function LinkButton(props) {
