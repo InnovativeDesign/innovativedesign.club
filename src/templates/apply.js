@@ -16,12 +16,12 @@ const useStyles = makeStyles({
   },
 })
 
-export default function ApplyPage(props) {
+export default function ApplyPage(props, widgetMeta) {
   const classes = useStyles()
   return(
-    <div className={classes.sectionONE}>
-      <p>APPLY PAGE W FUNCTIONAL</p>
-    </div>
+    // <div className={classes.sectionONE}>
+    <p>APPLY PAGE W FUNCTIONAL BUT WITHOUT MATERIALUI, ADDED ARGUMENTS AS WELL</p>
+    // </div>
   )
 }
 
