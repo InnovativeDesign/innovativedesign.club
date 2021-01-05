@@ -14,7 +14,7 @@ import { Helmet } from 'react-helmet';
 
 const PAGES = [
 {
-  name: 'About',
+  name: 'AboutCHANGED',
   slug: 'about'
 }, {
   name: 'DeCals',
