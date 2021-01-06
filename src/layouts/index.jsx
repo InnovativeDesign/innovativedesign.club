@@ -5,33 +5,10 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer'
 import 'bootstrap/dist/css/bootstrap.css'
 import '../css/_index.scss';
-import { makeStyles } from '@material-ui/core/styles';
+import '../css/pages/home.scss';
 import Script from 'react-load-script'
 
-const useStyles = makeStyles({
-  body: {
-    backgroundColor: "grey",
-    height: "100%",
-    display: "flex",
-    flexDirection: "column"
-  },
-  wrapper: {
-    minHeight: "calc(100vh - 350px)"
-  },
-  root: {
-    textRendering: "optimizeLegibility",
-    WebkitFontSmoothing: "antialiased",
-    fontFamily: "DM Sans",
-    textDecoration: "none",
-  },
-})
-
 export default function RootLayout(props) {
-  const classes = useStyles()
-  console.log("PROPS CHILDREN")
-  console.log(props.children)
-  console.log("PROPS CHILDREN")
-  console.log(props.data)
 
   function _handleNetlifyLoad() {
     const { netlifyIdentity } = window;
@@ -49,8 +26,8 @@ export default function RootLayout(props) {
 
   return (
     <DocumentTitle title='Innovative Design'>
-      <div className={classes.root}>
-        <div className={classes.wrapper}>
+      <div className="home">
+        <div className="wrapper">
           <Script
             url="https://identity.netlify.com/v1/netlify-identity-widget.js"
             onLoad={() => _handleNetlifyLoad()}
@@ -133,7 +110,7 @@ export default function RootLayout(props) {
     
           <Navbar />
           {/* PUT CONTENT INTO COMPONENTS */}
-          <div className={classes.content}>
+          <div>
             {props.children({ ...props, widgetMeta: props.data })}
           </div>
         </div>

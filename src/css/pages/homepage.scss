@@ -1,0 +1,11 @@
+.section__one {
+    flex: 3;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 60px);
+    width: 100%;
+    padding: 0 20%;
+}

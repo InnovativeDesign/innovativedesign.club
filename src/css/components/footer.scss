@@ -1,0 +1,31 @@
+.footer {
+    padding: 3em;
+    height: 350px;
+    position: relative;
+    background-color: #0038C9;
+    width: 100%;
+    z-index: 1;
+
+    .unstyled__list {
+        list-style: none;
+    }
+
+    .column__title {
+        color: white;
+        font-weight: 500;
+    }
+    .column__item {
+        color: white;
+        font-weight: 400;
+        line-height: 40px;
+        text-decoration: none;
+        transition: ease 200;
+        &:hover {
+            color: black;
+        }
+    }
+
+    .banner__logo {
+        margin-right: 70px;
+    }
+}

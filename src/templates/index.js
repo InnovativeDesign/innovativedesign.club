@@ -127,13 +127,6 @@
 // import Hero from '../components/Hero';
 // import ApplyWidget from '../components/ApplyWidget';
 
-// function TestComponent() {
-//   const classes = useStyles()
-//   return (
-//     <div className={classes.sectionONE}>i fucking hate this</div>
-//   )
-// }
-
 // export default class IndexPage extends React.Component {
 //   _handleNetlifyLoad() {
 //     const { netlifyIdentity } = window;
@@ -160,30 +153,14 @@
 //         url="https://identity.netlify.com/v1/netlify-identity-widget.js"
 //         onLoad={() => this._handleNetlifyLoad()}
 //       />
-//       <TestComponent />
 
 //       <div className="hero">
 //         <img className="blob__center blob--yellow" src="img/sp20/blob--yellow.svg" />
 //         <div className="images__container images__container--center">
 //         </div>
 //         <div className="hero__center">
-//           <h1>What we do</h1>
+//           <h1>OLD WITHOUT MATERIAL UI</h1>
 //         </div>
-//       </div>
-      
-//     <ApplyWidget data={this.props.widgetMeta} />
-//       <div className="row__container">
-//         {rowSlides.map((row) => {
-//           return (<div className={`row row__${row.type}`}>
-//             <img src={row.img} />
-//             <p>{row.caption}</p>
-//             <p>
-//               <Link to={row.link}>
-//                 {row.link_text} &rarr;
-//               </Link>
-//             </p>
-//           </div>);
-//         })}
 //       </div>
 //     </div>);
 //   }
@@ -212,28 +189,12 @@
 
 
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles'
-
-const useStyles = makeStyles({
-  // SECTION 1
-  sectionONE: {
-    flex: "3",
-    textAlign: "center",
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
-    height: "calc(100vh - 60px)",
-    width: "100%",
-    padding: "0 20%",
-  },
-})
+import '../css/pages/homepage.scss'
 
 export default function IndexPage(props) {
-  const classes = useStyles()
   return(
-    <div className={classes.sectionONE}>
-      <p>INDEX: Functional component - Material UI imported, called and used</p>
+    <div className="section__one">
+      <p>INDEX: NO MORE MATERIAL UI</p>
     </div>
   )
 }
