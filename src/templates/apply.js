@@ -25,7 +25,7 @@ function LinkRow(props) {
 export default function ApplyPage(props) {
   return(
     <div className="apply__wrapper">
-      <div>
+        <div className="page__title">Apply</div>
         <div className="section__title">We want you to join us</div>
         <LinkRow 
           title = "For Students"
@@ -47,7 +47,6 @@ export default function ApplyPage(props) {
             {name: "Submit a request", href: "https://www.mcdonalds.com/us/en-us.html"},
           ]}
         />
-      </div>
       </div>
   )
 }

@@ -1,6 +1,6 @@
 
 .apply__wrapper {
-  max-width: 50vw;
+  max-width: 70vw;
   height: calc(100vh - 60px);
   width: 100%;
   margin: auto;
@@ -18,6 +18,7 @@
     font-size: 32px;
     padding-top: 10px;
   }
+  // Row__item has underline effects
   .row__item {
     color: black;
     font-weight: 400;
@@ -25,7 +26,7 @@
     text-decoration: none;
     display: inline;
     position: relative;
-    overflow: hidden;
+    // overflow: hidden;
     text-decoration: none;
     &.row__item:after {
       content: "";
@@ -37,8 +38,9 @@
       background: #000;
       height: 2px;
       transition-property: width;
-      transition-duration: 0.3s;
+      transition-duration: .3s;
       transition-timing-function: ease-out;
+      pointer-events: none;
     }
     &.row__item:hover:after,
     &.row__item:focus:after,
@@ -46,8 +48,10 @@
       left: 0;
       right: auto;
       width: 100%;
+      pointer-events: none;
     }
   }
+
 }
 
 // .apply {
