@@ -43,7 +43,7 @@ export default function Footer() {
           {/* LOGO*/}
           <div className="col">
             <Link to="/" className="banner__logo">
-              <img src="/img/Footer-Logo.png" />
+              <img src="/img/Footer-Logo.svg" alt="Innovative Design"/>
             </Link>
           </div>
           {/* STUDENTS */}
