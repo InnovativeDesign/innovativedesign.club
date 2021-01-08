@@ -173,37 +173,27 @@
 //   }
 // }
 
-.external__link {
-  color: black;
+.g__ex__link{
   text-decoration: none;
-  font-weight: 400;
-  font-size: 24px;
-  display: inline;
   position: relative;
-  overflow: hidden;
-  &.external__link:after {
-    content: "";
+  &.g__ex__link:after{
+    content: '';
     position: absolute;
-    z-index: -1;
+    width: 0; height: 3px;
+    display: block;
     right: 0;
-    width: 0;
-    bottom: -5px;
-    background: #000;
-    height: 2px;
-    transition-property: width;
-    transition-duration: .3s;
-    transition-timing-function: ease-out;
-    pointer-events: none;
+    background: black;
+    transition: width .3s ease;
+    -webkit-transition: width .3s ease;
   }
-  &.external__link:hover:after,
-  &.external__link:focus:after,
-  &.external__link:active:after {
-    left: 0;
-    right: auto;
+   
+  &.g__ex__link:hover:after{
     width: 100%;
-    pointer-events: none;
+    left: 0;
+    background: black;
   }
 }
+
 
 .g__page__wrapper {
   max-width: 70vw;

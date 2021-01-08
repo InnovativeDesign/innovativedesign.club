@@ -13,7 +13,7 @@ function LinkRow(props) {
             {props.links.map((link) => (
               <div>
                 <hr />
-                <li><a className="row__item" href={link.href} target="_blank">{link.name} &#x2192;</a></li>
+                <li><a className="g__ex__link col__item" href={link.href} target="_blank">{link.name} &#x2192;</a></li>
               </div>
             ))}
           </ul>
