@@ -1,16 +1,7 @@
 
-.apply__wrapper {
-  max-width: 70vw;
-  height: calc(100vh - 60px);
-  width: 100%;
-  margin: auto;
+.apply {
   .unstyled__list {
     list-style: none;
-  }
-  .section__title {
-    color: black;
-    font-weight: 400;
-    font-size: 40px;
   }
   .row__title {
     color: black;
@@ -21,13 +12,12 @@
   // Row__item has underline effects
   .row__item {
     color: black;
-    font-weight: 400;
-    font-size: 25px;
     text-decoration: none;
+    font-weight: 400;
+    font-size: 24px;
     display: inline;
     position: relative;
-    // overflow: hidden;
-    text-decoration: none;
+    overflow: hidden;
     &.row__item:after {
       content: "";
       position: absolute;
