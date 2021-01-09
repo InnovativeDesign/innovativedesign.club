@@ -1,6 +1,6 @@
 import React from 'react';
 import PageHeader from "../components/PageHeader"
-
+import "../css/pages/clients.scss"
 
 // export default class ApplyPage extends React.Component {
 //   constructor(props) {
@@ -27,6 +27,8 @@ export default function ClientPage() {
         photography, or web design project. Creative work is done pro bono for on campus student 
         organizations and university programs."
       />
+      <h1>Our service</h1>
+      
     </div>
   )
 }

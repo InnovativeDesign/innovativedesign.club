@@ -38,7 +38,7 @@ function Column(props) {
 export default function Footer() {
   return (
     <div className="footer">
-      <div className="row__wrapper">
+      <div className="g__flex__row">
         {/* LOGO*/}
         <Link to="/" className="banner__logo">
           <img src="/img/Footer-Logo.svg" alt="Innovative Design" style={{ width: "18em" }} />

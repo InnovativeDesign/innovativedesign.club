@@ -199,10 +199,22 @@ a:hover, a:visited, a:link, a:active {
   }
 }
 
+h1 {
+  font-weight: 400;
+  color: black;
+}
+
 
 .g__page__wrapper {
   max-width: $global-max-width;
   width: 100%;
   min-height: calc(100vh - 60px);
   margin: auto;
+}
+
+.g__flex__row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: $global-max-width;
 }
