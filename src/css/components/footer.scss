@@ -4,8 +4,22 @@
     height: 350px;
     position: relative;
     background-color: $sp21blue;
+    display: flex;
+    justify-content: center;
     width: 100%;
     z-index: 1;
+
+    .row__wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: $global-max-width;
+    }
+
+    .column__wrapper {
+        display: flex;
+        flex-direction: column;
+    }
 
     .unstyled__list {
         list-style: none;
@@ -27,6 +41,6 @@
     }
 
     .banner__logo {
-        margin-right: 70px;
+        min-width: 100px;
     }
 }

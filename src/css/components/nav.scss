@@ -40,7 +40,7 @@ $navbar-color: white;
     max-width: $global-max-width;
     margin: 0 auto;
     clear: both;
-    background-color: transparent;
+    // background-color: transparent;
 
     @media (max-width: 1280px) {
       padding: 0 20px;
@@ -52,7 +52,10 @@ $navbar-color: white;
 
     .nav__item {
       float: left;
-      margin: 0 24px;
+      // margin: 0 24px;
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-left: 48px;
       vertical-align: middle;
       color: $dark-grey;
       font-family: "DM Sans";
