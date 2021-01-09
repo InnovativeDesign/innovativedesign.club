@@ -67,6 +67,7 @@ export default function Navbar() {
                 to={`/${page.slug}`}
                 onClick={() => _handleHamburger()}
                 key={page.slug}
+                dataText={page.name}
               >
                 {page.name}
               </Link>

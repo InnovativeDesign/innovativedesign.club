@@ -1,4 +1,5 @@
 // Navigation
+$navbar-color: white;
 
 .nav {
   @include clearfix();
@@ -6,7 +7,7 @@
   max-height: $navbar-height;
   width: 100%;
   overflow: hidden;
-  background-color: transparent;
+  background-color: $navbar-color;
   z-index: 1;
 
   @media (max-width: 820px) {
@@ -23,7 +24,7 @@
     @media (max-width: 820px) {
       transition: max-height 250ms;
       box-shadow: 0 1px 1px 1px rgba($grey, 0.15);
-      background-color: #FFFCF3;
+      background-color: #fffcf3;
 
       &.nav--open {
         max-height: $navbar-height * 6;
@@ -62,11 +63,32 @@
       text-decoration: none;
 
       &.sp21 {
-        color: #0038C9;
+        color: $sp21blue;
       }
 
-      &.sp21:hover {
-        color: #A9A9A9;
+      &.sp21::before {
+        /* This will create the layer 
+           over original text*/
+        content: attr(dataText);
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        /* Setting different color than 
+           that of original text  */
+        color: $navbar-color;
+        color: lightgray;
+        background-color: $navbar-color;
+        overflow: hidden;
+
+        /* Setting width to 0*/
+        width: 0%;
+        transition: .3s;
+      }
+
+      &.sp21:hover::before {
+        /* Setting width to 100 on hover*/
+        width: 100%;
       }
 
       &.nav__logo {
@@ -107,7 +129,7 @@
         &.nav__logo {
           // background-color: black;
           display: inline-block;
-          margin-right: 50%; 
+          margin-right: 50%;
         }
 
         &.nav__cta {
@@ -130,7 +152,7 @@
             transition: transform 0.25s;
 
             &.bar--1 {
-              top: 4px
+              top: 4px;
             }
 
             &.bar--2 {
@@ -142,11 +164,11 @@
             position: absolute;
             width: 100%;
             height: 2px;
-            background: #295E6A;
+            background: #295e6a;
             transition: transform 0.25s;
 
             &.bar--1 {
-              top: 4px
+              top: 4px;
             }
 
             &.bar--2 {

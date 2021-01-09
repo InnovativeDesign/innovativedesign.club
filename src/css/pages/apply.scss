@@ -1,7 +1,9 @@
 
 .apply {
   .unstyled__list {
-    list-style: none;
+    // list-style: none;
+    display: flex;
+    flex-direction: column;
   }
   .row__title {
     color: black;
@@ -11,7 +13,7 @@
   }
   // Row__item has underline effects
   
-  .col__item {
+  .my__item {
     font-weight: 400;
     font-size: 24px;
     color: black;
@@ -19,6 +21,7 @@
   }
 
 }
+
 
 // .apply {
 //   max-width: $global-max-width;

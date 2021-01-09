@@ -9,14 +9,14 @@ import "../css/pages/decals.scss"
 // href
 function Widget(props) {
   return (
-    <div className="widget">
+    <a className="widget" href="https://stackoverflow.com/questions/2789703/remove-stubborn-underline-from-link" target="blank">
       <img className="widget__img" src={props.src} />
       <div className="widget__content">
         <div className="widget__title">{props.title}</div>
         <div className="widget__description">{props.description}</div>
         <a href={props.href} className="g__ex__link widget__apply" target="_blank">Apply &#x2192;</a>
       </div>
-    </div>
+    </a>
   )
 }
 

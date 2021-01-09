@@ -3,7 +3,7 @@
 * {
   font-family: "DM Sans";
   font-weight: 500;
-  color: $dark-grey;
+  color: black;
 }
 
 .hero {
@@ -173,6 +173,11 @@
 //   }
 // }
 
+// Jank on hover solution
+a:hover, a:visited, a:link, a:active {
+  text-decoration: none;
+}
+
 .g__ex__link{
   text-decoration: none;
   position: relative;
@@ -196,7 +201,7 @@
 
 
 .g__page__wrapper {
-  max-width: 70vw;
+  max-width: $global-max-width;
   width: 100%;
   min-height: calc(100vh - 60px);
   margin: auto;
