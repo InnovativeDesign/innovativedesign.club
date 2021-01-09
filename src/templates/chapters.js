@@ -1,19 +1,20 @@
 import React from 'react';
-
-import Hero from '../components/Hero';
+import PageHeader from '../components/PageHeader'
 
 export default class ChapterPage extends React.Component {
 
-  render () {
+  render() {
 
     return (
       <div className="club">
-        <Hero data={this.props.data} />
-        <div className="widget">
-          <h2>What's IDUEP?</h2>
-          <div>Launched in 2020, Innovative Design's University Extension Program is 
-            an initiative started to extend our mission of bringing together creative
-            individuals by collaborating, inspiring and educating one another.</div>
+        <div className="g__page__wrapper">
+          <PageHeader
+            pageIndicator="Chapters"
+            title="InnoD at your campus"
+            description="Launched in 2020, Innovative Design's University Extension 
+          Program is an initiative started to extend our mission of bringing together 
+          creative individuals by collaborating, inspiring and educating one another."
+          />
         </div>
         <div className={`team__block team__block-left`}>
           <div className="thumb">
@@ -21,9 +22,9 @@ export default class ChapterPage extends React.Component {
           </div>
           <div className="info">
             <h1>Incubation</h1>
-            <p>We provide consulting and supplemental mentoring helping you create 
-              an agency at an accredited university with a goal of being part our extensive 
-              Innovative Design network.
+            <p>We provide consulting and supplemental mentoring helping you create
+            an agency at an accredited university with a goal of being part our extensive
+            Innovative Design network.
             </p>
             <a href="https://innodatusc.webflow.io/#club" target="__blank">InnoD @ USC</a>
           </div>
@@ -34,9 +35,9 @@ export default class ChapterPage extends React.Component {
           </div>
           <div className="info">
             <h1>Mentorship</h1>
-            <p>Our mentorship program for already existing creative programs at 
-              universities who want to revitalize their structure or find new ways 
-              to keep their program engaging.
+            <p>Our mentorship program for already existing creative programs at
+            universities who want to revitalize their structure or find new ways
+            to keep their program engaging.
             </p>
           </div>
         </div>
@@ -46,11 +47,11 @@ export default class ChapterPage extends React.Component {
           </div>
           <div className="info">
             <h1>Quick Chats</h1>
-            <p>Our Quick Chats program suits individuals who want industry insights 
-              and/or general tips for recruiting for specific design-related positions. 
-              After submitting a request, our team will pair you up with a fitting person 
-              within the Innovative Design network for you to chat with. This service is 
-              available to anyone on and off Berkeley's campus.
+            <p>Our Quick Chats program suits individuals who want industry insights
+            and/or general tips for recruiting for specific design-related positions.
+            After submitting a request, our team will pair you up with a fitting person
+            within the Innovative Design network for you to chat with. This service is
+            available to anyone on and off Berkeley's campus.
             </p>
           </div>
         </div>

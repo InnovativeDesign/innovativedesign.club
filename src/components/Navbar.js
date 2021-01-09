@@ -3,6 +3,7 @@ import Link from 'gatsby-link';
 import Headroom from 'react-headroom';
 import classNames from 'classnames';
 import { Helmet } from 'react-helmet';
+// import "../css/components/navbar.scss"
 
 
 /* To add page

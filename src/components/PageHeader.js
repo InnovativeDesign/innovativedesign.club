@@ -6,7 +6,7 @@ import '../css/components/pageheader.scss'
 // description
 export default function PageHeader(props) {
     return (
-        <div>
+        <div className="page__wrapper">
             <div className="page__indicator">{props.pageIndicator}</div>
             <div className="col__2">
                 <div className="page__title">{props.title}</div>

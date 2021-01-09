@@ -59,25 +59,24 @@ $navbar-color: white;
       font-weight: 500;
       font-size: 16px;
       line-height: $navbar-height;
-      transition: color 200ms ease-in-out;
       text-decoration: none;
 
       &.sp21 {
         color: $sp21blue;
       }
 
-      &.sp21::before {
+      &.sp21::after {
         /* This will create the layer 
            over original text*/
         content: attr(dataText);
         position: absolute;
         top: 0;
-        left: 0;
+        right: 0;
 
         /* Setting different color than 
            that of original text  */
         color: $navbar-color;
-        color: lightgray;
+        color: white;
         background-color: $navbar-color;
         overflow: hidden;
 
@@ -86,9 +85,10 @@ $navbar-color: white;
         transition: .3s;
       }
 
-      &.sp21:hover::before {
+      &.sp21:hover::after {
         /* Setting width to 100 on hover*/
         width: 100%;
+        left: 0;
       }
 
       &.nav__logo {

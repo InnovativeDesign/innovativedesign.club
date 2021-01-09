@@ -1,6 +1,7 @@
 import React from 'react';
 import Hero from '../components/Hero';
 import Officer from '../components/Officer';
+import PageHeader from '../components/PageHeader'
 
 export default class AboutPage extends React.Component {
   constructor(props) {
@@ -20,7 +21,13 @@ export default class AboutPage extends React.Component {
 
     return (
       <div className="about">
-        <Hero data={this.props.data} />
+        <PageHeader 
+          pageIndicator="About"
+          title="Leadership"
+          description="Our club and DeCals are led by the Officer Board. 
+          Each VP presides over an aspect of our club’s operation in addition to leading a 
+          Design or Photography team."
+        />
         <div className="officer__container">
           {officers.map((officer) => {
             const originalName = officer.image.substring(officer.image.lastIndexOf('/') + 1);
