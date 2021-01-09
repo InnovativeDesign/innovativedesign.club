@@ -1,7 +1,40 @@
 .decals {
-  
+  .widget__wrapper {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 40px;
+      max-width: 70vw;
+  }
+  .widget {
+      background-color: #F2F2F2;
+      padding: 0;
+      .widget__img {
+          width: 100%;
+          height: 100%;
+      }
+      .widget__content {
+          display: flex;
+          flex-direction: column;
+          padding: 40px;
+          .widget__title {
+              font-weight: 500;
+              font-size: 24px;
+          }
+          .widget__description {
+              padding-top: 20px;
+              font-weight: 300;
+              font-size: 16px;
+              // adjust pls
+              min-height: 300px;
+          }
+          .widget__apply {
+              text-decoration: none;
+              color: black;
+          }
+      }
+    }
 }
-
 
 // .decals {
 //   margin: 0 auto;

@@ -6,26 +6,23 @@ import "../css/pages/decals.scss"
 // src
 // title
 // description
-const style = {
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "center",
-  alignItems: "center",
-  backgroundColor: "light gray",
-}
+// href
 function Widget(props) {
   return (
-    <div style={style}>
-      <img src={props.src} />
-      <h1>{props.title}</h1>
-      <div>{props.description}</div>
+    <div className="widget">
+      <img className="widget__img" src={props.src} />
+      <div className="widget__content">
+        <div className="widget__title">{props.title}</div>
+        <div className="widget__description">{props.description}</div>
+        <a href={props.href} className="g__ex__link widget__apply" target="_blank">Apply &#x2192;</a>
+      </div>
     </div>
   )
 }
 
 export default function DecalsPage(props) {
   return (
-    <div className="g__page__wrapper">
+    <div className="g__page__wrapper decals">
       <PageHeader 
         pageIndicator="DeCals"
         title="We host 3 DeCals every semester!"
@@ -33,13 +30,14 @@ export default function DecalsPage(props) {
         For those interestered in photography, we offer the Photography Principles DeCal. 
         We open applications at the beginning of each semester. "
       />
-      <div style={{columnCount: 3, columnGap: "50px"}}>
+      <div className="widget__wrapper">
         <Widget 
           title="Intro to Photoshop & Illustrator"
           src="/img/decal/Photoshop-Decal.png"
           description="In this class we teach the basics of how to use Adobe Illustrator and Photoshop. 
           Don’t have it? Don’t worry! As a UC Berkeley student you have access to it for free. 
           We also touch on the basics of graphic design and branding. "
+          href="https://coryrylan.com/blog/css-gap-space-with-flexbox"
           />
         <Widget 
           title="Graphic Design Principles" 
@@ -47,6 +45,7 @@ export default function DecalsPage(props) {
           description="Already know Adobe Illustrator and Photoshop? 
           Want to learn more about graphic Design? This class is perfect for you! 
           We touch on a variety on styles and principles in this class. "
+          href="https://coryrylan.com/blog/css-gap-space-with-flexbox"
           />
         <Widget 
           title="Photography Principles" 
@@ -54,6 +53,7 @@ export default function DecalsPage(props) {
           description="Always wanted to learn how to use a camera? Already know how to? 
           Doesn’t matter! We will teach you how to shoot in manual and a variety of styles to go with it. 
           This class is the perfect excuse to finally learn the settings on your camera and to broaden the way you think when you hold the camera."
+          href="https://coryrylan.com/blog/css-gap-space-with-flexbox"
         />
       </div>
     </div>
