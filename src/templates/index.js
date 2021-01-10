@@ -1,144 +1,65 @@
-// import React from 'react';
-// import Link from 'gatsby-link';
-// import Script from 'react-load-script';
-// import Hero from '../components/Hero';
-// import ApplyWidget from '../components/ApplyWidget';
-// import { makeStyles, styled } from "@material-ui/core/styles"
-
-// const useStyles = makeStyles({
-//   // SECTION 1
-//   sectionONE: {
-//     flex: "3",
-//     textAlign: "center",
-//     display: "flex",
-//     flexDirection: "column",
-//     justifyContent: "center",
-//     alignItems: "center",
-//     height: "calc(100vh - 60px)",
-//     width: "100%",
-//     padding: "0 20%",
-//   },
-//   buttonWrapper: {
-//       display: "flex",
-//       minWidth: "300px",
-//       width: "70%",
-//       justifyContent: "center",
-//       paddingTop: "30px",
-//   },
-//   linkButton: {
-//     margin: "10px",
-//     padding: "15px 30px",
-//     borderRadius: "3px",
-//     textDecoration: "none",
-//     transition: "0.2s ease all",
-//     boxShadow: "0px 5px 10px rgba(0, 0, 0, 0.1)",
-//     backgroundColor: props => props.bcBefore,
-//     color: props => props.textColor,
-  
-//     '&:hover': {
-//       textDecoration: "none",
-//       backgroundColor: props => props.bcAfter,
-//       color: props => props.textColor,
-//     },
-//   },
-//   subText: {
-//     width: "40vw",
-//     color: "black",
-//     fontSize: "22px",
-//   },
-
-//   // SECITON 2
-//   sectionTWO: {
-
-//   }
-// })
-
-// BUTTON FOR THE FRONTPAGE
-// function LinkButton(props) {
-//   const { color, ...other } = props
-//   const LinkButtonClasses = useStyles(props)
-//   return <Link className={LinkButtonClasses.linkButton} {...other}/>
-// }
-
-// export default function IndexPage(props) {
-//   const classes = useStyles()
-
-  // function _handleNetlifyLoad() {
-  //   const { netlifyIdentity } = window;
-  //   if (netlifyIdentity) {
-  //     netlifyIdentity.on('init', (user) => {
-  //       if (!user) {
-  //         netlifyIdentity.on('login', () => {
-  //           document.location.href = '/admin/';
-  //         });
-  //       }
-  //     });
-  //   }
-  //   netlifyIdentity.init();
-  // }
-
-//   return (
-//     <div>
-//       {/* <Script
-//         url="https://identity.netlify.com/v1/netlify-identity-widget.js"
-//         onLoad={() => _handleNetlifyLoad()}
-//       /> */}
-//       <div className={classes.sectionONE}>
-//         <p className={classes.subText}>REMOVED NETFLIY AND GRAPHQL Innovative Design is UC Berkeley’s premier creative agency. 
-//           We are designers, photographers, and web developers 
-//           together in a mission to Make Berkeley Beautiful.
-//         </p>
-//         <div className={classes.buttonWrapper}>
-//           <LinkButton to="/club" textColor="black" bcBefore ="#EAEAEA" bcAfter  ="#B6B6B6">See our work</LinkButton>
-//           <LinkButton to="/apply" textColor="white" bcBefore ="#0038C9" bcAfter  ="#002177">Apply to join us</LinkButton>
-//         </div>
-//       </div>
-//       <div className={classes.page2}>
-
-//       </div>
-//     </div>
-//   )
-// }
-
-// export const pageQuery = graphql`
-//   query IndexQuery {
-//     markdownRemark(frontmatter: { path: { eq: "/" } }) {
-//       html
-//       frontmatter {
-//         hero_heading
-//         hero_subheading
-//         row_slides {
-//           img
-//           caption
-//           link
-//           link_text
-//           type
-//         }
-//       }
-//     }
-//   }
-// `;
-
-
 import React from 'react';
 import Link from 'gatsby-link'
 import '../css/pages/homepage.scss'
 
+
+function SectionTwo(props) {
+  function TagRow(props) {
+    const tagRow = "g__flex__ row" + " " + "tag__row"
+    return (
+      <div className={tagRow}>
+        {props.children}
+      </div>
+    )
+  }
+  return (
+    <div className="section__two">
+      {/* CALLING ALL */}
+      <TagRow>
+        <h2>Calling</h2>
+        <img src="/img/CALLING-ALL.png" />
+        <h2>all</h2>
+      </TagRow>
+      {/* CREATIVES */}
+      <h2 style={{ fontFamily: "IM Fell French Canon" }}>creatives...</h2>
+      <TagRow>
+        <img src="/img/homepage/DESIGNER-SPARKLE.svg" />
+        <h2 style={{ fontFamily: "Prophet" }}>designers</h2>
+        <img src="/img/homepage/DESIGNER-IMG.png" />
+      </TagRow>
+      <TagRow>
+        <img src="/img/homepage/PHOTOGRAPHER-IMG.png"/>
+        <h2>photographers</h2>
+        <img src="/img/homepage/PHOTOGRAPHER-SPARKLE.svg"/>
+      </TagRow>
+      <TagRow>
+        <img src="/img/homepage/DEVELOPER-SPARKLE.svg"/>
+        <h2 style={{fontFamily:"Minecraft"}}>developers</h2>
+        <img src="/img/homepage/DEVELOPER-IMG.png"/>
+      </TagRow>
+    </div>
+  )
+}
+
+function SectionThree(props) {
+  
+}
+
 export default function IndexPage(props) {
-  return(
+  return (
     <div>
-      <div className="section__one">
-        <div className="hero__text">Innovative Design is UC Berkeley’s premier creative agency. 
-          We are designers, photographers, and web developers 
-          together in a mission to Make Berkeley Beautiful.</div>
-        <div className="home__button__wrapper">
-          <Link className="home__button grey__sp21">See our work</Link>
-          <Link className="home__button blue__sp21">Apply to join us</Link>
+      <div className="g__page__wrapper">
+        <div className="section__one">
+          <div className="hero__text">Innovative Design is UC Berkeley’s premier creative agency.
+          We are designers, photographers, and web developers
+            together in a mission to Make Berkeley Beautiful.</div>
+          <div className="home__button__wrapper">
+            <Link className="home__button grey__sp21">See our work</Link>
+            <Link className="home__button blue__sp21">Apply to join us</Link>
+          </div>
         </div>
       </div>
-      <div className="section__two">
-        
-      </div>
+      <SectionTwo />
     </div>
 
   )

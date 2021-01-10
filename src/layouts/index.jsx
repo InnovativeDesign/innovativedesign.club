@@ -91,6 +91,14 @@ export default function RootLayout(props) {
               rel="stylesheet">
             </link>
             <link
+              href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
+              rel="stylesheet">
+            </link>
+            <link 
+              href="https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon:ital@1&display=swap" 
+              rel="stylesheet">
+            </link>
+            <link
               href='https://fonts.googleapis.com/css?family=Fira+Sans:400,300,300italic,400italic,500,500italic,700,700italic'
               rel='stylesheet'
               type='text/css'

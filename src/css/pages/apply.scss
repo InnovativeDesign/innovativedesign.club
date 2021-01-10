@@ -1,24 +1,15 @@
+@import '../variables';
+$halfway: $global-max-width/2;
 
 .apply {
-  .unstyled__list {
-    // list-style: none;
-    display: flex;
-    flex-direction: column;
-  }
   .row__title {
-    color: black;
-    font-weight: 400;
-    font-size: 32px;
     padding-top: 10px;
+    min-width: $halfway;
+  }
+  .col__item {
+    min-width: $halfway;
   }
   // Row__item has underline effects
-  
-  .my__item {
-    font-weight: 400;
-    font-size: 24px;
-    color: black;
-    text-decoration: none;
-  }
 
 }
 

@@ -200,6 +200,37 @@ a:hover, a:visited, a:link, a:active {
 }
 
 h1 {
+  font-size: 40px;
+  font-weight: 400;
+  color: black;
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: 400;
+  color: black;
+}
+
+h3 {
+  font-size: 32px;
+  font-weight: 400;
+  color: black;
+}
+
+h4 {
+  font-size: 24px;
+  font-weight: 500;
+  color: black;
+}
+
+h5 {
+  font-size: 18px;
+  font-weight: 300;
+  color: black;
+}
+
+p {
+  font-size: 16px;
   font-weight: 400;
   color: black;
 }
@@ -217,4 +248,9 @@ h1 {
   flex-direction: row;
   justify-content: space-between;
   width: $global-max-width;
+}
+
+.g__flex__col {
+  display: flex;
+  flex-direction: column;
 }

@@ -1,7 +1,14 @@
 @import "../variables";
 
+.hero__text {
+    max-width: 50vw;
+    font-weight: 400;
+    font-size: 22px;
+    text-align: center;
+    color:black
+}
+
 .section__one {
-    flex: 3;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -9,12 +16,6 @@
     align-items: center;
     height: calc(100vh - 60px);
     width: 100%;
-    padding: 0 20%;
-    .hero__text {
-        max-width: 50vw;
-        font-size: 22px;
-        color:black
-    }
     .home__button__wrapper {
         display: flex;
         min-width: 300px;
@@ -53,5 +54,20 @@
 }
 
 .section__two {
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #F8F7F2;
+    padding-top: 100px;
+    gap: 30px;
+    h2 {
+        font-size: 90px;
+    }
+    img {
+        padding: 0px 48px;
+    }
+    .tag__row {
+        justify-content: center;
+    }
 }

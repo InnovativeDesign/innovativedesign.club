@@ -9,12 +9,12 @@ import "../css/pages/decals.scss"
 // href
 function Widget(props) {
   return (
-    <a className="widget" href="https://stackoverflow.com/questions/2789703/remove-stubborn-underline-from-link" target="blank">
-      <img className="widget__img" src={props.src} />
-      <div className="widget__content">
-        <div className="widget__title">{props.title}</div>
-        <div className="widget__description">{props.description}</div>
-        <a href={props.href} className="g__ex__link widget__apply" target="_blank">Apply &#x2192;</a>
+    <a className="decal__widget" href="https://stackoverflow.com/questions/2789703/remove-stubborn-underline-from-link" target="blank">
+      <img className="decal__widget__img" src={props.src} />
+      <div className="decal__widget__content">
+        <h4>{props.title}</h4>
+        <p style={{minHeight:"17em"}}>{props.description}</p>
+        <a href={props.href} className="g__ex__link" target="_blank" style={{color: "black"}}>Apply &#x2192;</a>
       </div>
     </a>
   )
@@ -30,7 +30,7 @@ export default function DecalsPage(props) {
         For those interestered in photography, we offer the Photography Principles DeCal. 
         We open applications at the beginning of each semester. "
       />
-      <div className="widget__wrapper">
+      <div className="g__flex__row decal__widget__wrapper">
         <Widget 
           title="Intro to Photoshop & Illustrator"
           src="/img/decal/Photoshop-Decal.png"
