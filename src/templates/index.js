@@ -17,7 +17,7 @@ function SectionTwo(props) {
       {/* CALLING ALL */}
       <TagRow>
         <h2>Calling</h2>
-        <img src="/img/CALLING-ALL.png" />
+        <img src="/img/homepage/CALLING-ALL.png" />
         <h2>all</h2>
       </TagRow>
       {/* CREATIVES */}
@@ -41,9 +41,9 @@ function SectionTwo(props) {
   )
 }
 
-function SectionThree(props) {
+// function SectionThree(props) {
   
-}
+// }
 
 export default function IndexPage(props) {
   return (
