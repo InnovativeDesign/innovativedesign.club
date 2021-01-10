@@ -1,0 +1,49 @@
+// THIS IS SO FUCKING JANK HAHAH
+
+
+
+.fade-in- {
+    opacity: 0;
+    transform: translateY(10vh);
+    visibility: hidden;
+    transition: opacity 1200ms ease-out, transform 600ms ease-out, visibility 1200ms ease-out;
+    will-change: opacity, transform, visibility;
+}
+.fade-in-left {
+    opacity: 0;
+    transform: translateX(-10vh);
+    visibility: hidden;
+    transition: opacity 1200ms ease-out, transform 600ms ease-out, visibility 1200ms ease-out;
+    will-change: opacity, transform, visibility;
+}
+
+.fade-in-right {
+    opacity: 0;
+    transform: translateX(10vh);
+    visibility: hidden;
+    transition: opacity 1200ms ease-out, transform 600ms ease-out, visibility 1200ms ease-out;
+    will-change: opacity, transform, visibility;
+}
+
+.fade-in-top {
+    opacity: 0;
+    transform: translateY(-10vh);
+    visibility: hidden;
+    transition: opacity 1200ms ease-out, transform 600ms ease-out, visibility 1200ms ease-out;
+    will-change: opacity, transform, visibility;
+}
+
+.fade-in-bottom {
+    opacity: 0;
+    transform: translateY(10vh);
+    visibility: hidden;
+    transition: opacity 1200ms ease-out, transform 600ms ease-out, visibility 1200ms ease-out;
+    will-change: opacity, transform, visibility;
+}
+// HOLY FUCK THIS IS UGLY THERES GOTTA BE A BETTER WAY
+
+.is-visible {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+}
