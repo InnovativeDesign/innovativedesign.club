@@ -3,68 +3,29 @@ import Link from 'gatsby-link'
 import '../css/pages/homepage.scss'
 import FloatIn from '../components/FloatIn'
 
+const floatContent = [
+  [{content: "Calling", dir:"left"}, {content: "/img/homepage/CALLING-ALL.png", dir:"bottom"}, {content: "all", dir:"right"}],
+  [{content: "creatives...", dir:"left", font: "IM Fell French Canon"}],
+  [{content: "/img/homepage/DESIGNER-SP.svg", dir:"left"}, {content: "designers", dir:"bottom", font:"Prophet"}, {content: "/img/homepage/DESIGNER-IMG.png", dir:"right"}],
+  [{content: "/img/homepage/PHOTOGRAPHER-IMG.png", dir:"left"}, {content: "photographers", dir:"bottom", font:""}, {content: "/img/homepage/PHOTOGRAPHER-SP.svg", dir:"right"}],
+  [{content: "/img/homepage/DEVELOPER-SP.svg", dir:"left"}, {content: "developers", dir:"bottom", font:"Mondwest"}, {content: "/img/homepage/DEVELOPER-IMG.png", dir:"right"}],
+]
 
 function SectionTwo(props) {
-  function TagRow(props) {
-    const tagRow = "g__flex__ row" + " " + "tag__row"
-    return (
-      <div className={tagRow}>
-        {props.children}
-      </div>
-    )
-  }
   return (
     <div className="section__two">
-      {/* CALLING ALL */}
-      {/* gotta be a better way to render this... */}
-      <TagRow>
-        <FloatIn content={<h2>Calling</h2>} dir="left" />
-        <FloatIn content={<img src="/img/homepage/CALLING-ALL.png" />} dir="bottom" />
-        <FloatIn content={<h2>all</h2>} dir="right" />
-      </TagRow>
-      {/* CREATIVES */}
-      <h2 style={{ fontFamily: "IM Fell French Canon" }}>creatives...</h2>
-      <TagRow>
-        <img src="/img/homepage/DESIGNER-SPARKLE.svg" />
-        <h2 style={{ fontFamily: "Prophet" }}>designers</h2>
-        <img src="/img/homepage/DESIGNER-IMG.png" />
-      </TagRow>
-      <TagRow>
-        <img src="/img/homepage/PHOTOGRAPHER-IMG.png" />
-        <h2>photographers</h2>
-        <img src="/img/homepage/PHOTOGRAPHER-SPARKLE.svg" />
-      </TagRow>
-      <TagRow>
-        <img src="/img/homepage/DEVELOPER-SPARKLE.svg" />
-        <h2 style={{ fontFamily: "Minecraft" }}>developers</h2>
-        <img src="/img/homepage/DEVELOPER-IMG.png" />
-      </TagRow>
+      {props.content.map((row) => (
+        <div className="g__flex__ row tag__row">
+          {row.map((item) => (
+            <FloatIn 
+            content = {item.content.startsWith("/") ? <img src={item.content}/> : <h2 style={{fontFamily: item.font}}>{item.content}</h2>}
+            dir = {item.dir}
+            />
+          ))}
+        </div>
+      ))}
     </div>
   )
-}
-
-// function SectionThree(props) {
-
-// }
-
-function FadeInSection(props) {
-  const [isVisible, setVisible] = useState(true);
-  const domRef = useRef();
-  useEffect(() => {
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => setVisible(entry.isIntersecting));
-    });
-    observer.observe(domRef.current);
-    return () => observer.unobserve(domRef.current);
-  }, []);
-  return (
-    <div
-      className={`fade-in-section ${isVisible ? 'is-visible' : ''}`}
-      ref={domRef}
-    >
-      {props.children}
-    </div>
-  );
 }
 
 export default function IndexPage(props) {
@@ -84,7 +45,7 @@ export default function IndexPage(props) {
           </div>
         </div>
       </div>
-      <SectionTwo />
+      <SectionTwo content={floatContent}/>
     </div>
 
   )

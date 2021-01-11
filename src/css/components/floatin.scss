@@ -1,44 +1,49 @@
 // THIS IS SO FUCKING JANK HAHAH
 
 
+$opacity: 0;
+$visibility: hidden;
+$transition: opacity 1200ms ease-out, transform 1600ms ease-out, visibility 1200ms ease-out;
+$will-change: opacity, transform, visibility;
+$translate-amount: 15vh;
 
 .fade-in- {
-    opacity: 0;
-    transform: translateY(10vh);
-    visibility: hidden;
-    transition: opacity 1200ms ease-out, transform 600ms ease-out, visibility 1200ms ease-out;
-    will-change: opacity, transform, visibility;
+    opacity: $opacity;
+    transform: translateY($translate-amount);
+    visibility: $visibility;
+    transition: $transition;
+    will-change: $will-change;
 }
 .fade-in-left {
-    opacity: 0;
-    transform: translateX(-10vh);
-    visibility: hidden;
-    transition: opacity 1200ms ease-out, transform 600ms ease-out, visibility 1200ms ease-out;
-    will-change: opacity, transform, visibility;
+    opacity: $opacity;
+    transform: translateX(-$translate-amount);
+    visibility: $visibility;
+    transition: $transition;
+    will-change: $will-change;
 }
 
 .fade-in-right {
-    opacity: 0;
-    transform: translateX(10vh);
-    visibility: hidden;
-    transition: opacity 1200ms ease-out, transform 600ms ease-out, visibility 1200ms ease-out;
-    will-change: opacity, transform, visibility;
+    opacity: $opacity;
+    transform: translateX($translate-amount);
+    visibility: $visibility;
+    transition: $transition;
+    will-change: $will-change;
 }
 
 .fade-in-top {
-    opacity: 0;
-    transform: translateY(-10vh);
-    visibility: hidden;
-    transition: opacity 1200ms ease-out, transform 600ms ease-out, visibility 1200ms ease-out;
-    will-change: opacity, transform, visibility;
+    opacity: $opacity;
+    transform: translateY(-$translate-amount);
+    visibility: $visibility;
+    transition: $transition;
+    will-change: $will-change;
 }
 
 .fade-in-bottom {
-    opacity: 0;
-    transform: translateY(10vh);
-    visibility: hidden;
-    transition: opacity 1200ms ease-out, transform 600ms ease-out, visibility 1200ms ease-out;
-    will-change: opacity, transform, visibility;
+    opacity: $opacity;
+    transform: translateY($translate-amount);
+    visibility: $visibility;
+    transition: $transition;
+    will-change: $will-change;
 }
 // HOLY FUCK THIS IS UGLY THERES GOTTA BE A BETTER WAY
 
