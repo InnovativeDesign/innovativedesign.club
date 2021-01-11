@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import Link from 'gatsby-link'
 import '../css/pages/homepage.scss'
 import FloatIn from '../components/FloatIn'
+import { flip } from 'lodash';
 
 const floatContent = [
   [{content: "Calling", dir:"left"}, {content: "/img/homepage/CALLING-ALL.png", dir:"bottom"}, {content: "all", dir:"right"}],
@@ -15,7 +16,7 @@ function SectionTwo(props) {
   return (
     <div className="section__two">
       {props.content.map((row) => (
-        <div className="g__flex__ row tag__row">
+        <div className="g__flex__row" style={{justifyContent: "center"}}>
           {row.map((item) => (
             <FloatIn 
             content = {item.content.startsWith("/") ? <img src={item.content}/> : <h2 style={{fontFamily: item.font}}>{item.content}</h2>}
@@ -28,10 +29,16 @@ function SectionTwo(props) {
   )
 }
 
+function SectionThree(props) {
+  return (
+    <div className="section__three">
+    </div>
+  )
+}
+
 export default function IndexPage(props) {
   return (
-    <div>
-      <div className="cunt">
+    <div className="g__flex__column total__wrapper">
         <div className="g__page__wrapper">
           <div className="section__one">
             {/* <img src="/img/homepage/HERO-IMG.png"/> */}
@@ -44,8 +51,9 @@ export default function IndexPage(props) {
             </div>
           </div>
         </div>
-      </div>
       <SectionTwo content={floatContent}/>
+      <hr className="vertical__line"/>
+      <SectionThree />
     </div>
 
   )

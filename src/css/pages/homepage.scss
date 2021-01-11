@@ -1,5 +1,11 @@
 @import "../variables";
 
+.total__wrapper {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    text-align: center;
+}
+
 .hero__text {
     max-width: 50vw;
     font-weight: 400;
@@ -7,22 +13,6 @@
     text-align: center;
     color: black;
 }
-// .cunt {
-//     background-image: url("/img/homepage/HERO-IMG.png");
-// }
-
-// .fade-in-section {
-//     opacity: 0;
-//     transform: translateX(10vh);
-//     visibility: hidden;
-//     transition: opacity 1200ms ease-out, transform 600ms ease-out, visibility 1200ms ease-out;
-//     will-change: opacity, transform, visibility;
-// }
-// .fade-in-section.is-visible {
-//     opacity: 1;
-//     transform: none;
-//     visibility: visible;
-// }
 
 .section__one {
     text-align: center;
@@ -76,14 +66,24 @@
     background-color: #f8f7f2;
     padding-top: 100px;
     gap: 30px;
-
+    padding-bottom: 100px;
+    // height: 150%;
     h2 {
         font-size: 90px;
     }
     img {
         padding: 0px 48px;
     }
-    .tag__row {
-        justify-content: center;
-    }
 }
+
+.vertical__line {
+    transform: translateY(-100px);
+    width: 2px;
+    height: 200px;
+    background-color:#F27459;
+}
+
+.section__three {
+
+}
+    
