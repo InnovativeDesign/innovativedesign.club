@@ -1,5 +1,33 @@
 import React from 'react';
 import PageHeader from '../components/PageHeader'
+import "../css/pages/events.scss"
+
+const eventContent = [
+  {title: "HEX: Hone & Explore", img:"/img/events/HEX-IMG.png", description: "A weekend of free, virtual workshops where students can learn various creative skills."}
+]
+
+function Event(props) {
+  const event = props.event
+  return (
+    <div className="g__flex_row">
+      <img src={event.img} />
+      <div className="g__flex__col">
+        <h3>{event.title}</h3>
+        <p>{event.description}</p>
+      </div>
+    </div>
+  )
+}
+
+function EventList(props) {
+  return (
+    <div>
+      {props.content.map((event) => (
+        <Event event={event} />
+      ))}
+    </div>
+  )
+}
 
 export default function EventsPage(props) {
   return (
@@ -10,9 +38,13 @@ export default function EventsPage(props) {
         description="At Innovative Design, we value education. 
         That’s why we regularly host events to increase the number of design opportunities in our community."
       />
+      <h2>Our events</h2>
+      <EventList content={eventContent}/>
     </div>
   )
 }
+
+
 
 // import $ from 'jquery';
 // import _ from 'lodash';
