@@ -3,25 +3,46 @@ import PageHeader from '../components/PageHeader'
 import "../css/pages/events.scss"
 
 const eventContent = [
-  {title: "HEX: Hone & Explore", img:"/img/events/HEX-IMG.png", description: "A weekend of free, virtual workshops where students can learn various creative skills."}
+  {
+    title: "HEX: Hone & Explore", 
+    img:"/img/events/HEX-IMG.png", 
+    description: "A weekend of free, virtual workshops where students can learn various creative skills.",
+    date: "2/1 - 2/3",
+    href: "https://hex.innovativedesign.club/"
+  },
+  {
+    title: "CMYK: Come Make Your Mark",
+    img:"/img/events/CMYK-IMG.png",
+    description: "A designathon and day of learning and practicing design through a series of talks and friendly competition.",
+    date: "2/1 - 2/3",
+    href: "https://cmyk.innovativedesign.club/"
+  },
+  {
+    title: "RGB: Reach, Grow, Build",
+    img:"/img/events/RGB-IMG.png",
+    description: "A day of learning from industry designers through a series of talks, workshops, and open Q&A.",
+    date: "2/1 - 2/3",
+    href: "https://rgb.innovativedesign.club/"
+  },
 ]
 
 function Event(props) {
   const event = props.event
   return (
-    <div className="g__flex_row">
-      <img src={event.img} />
-      <div className="g__flex__col">
-        <h3>{event.title}</h3>
+    <a href={event.href} target="_blank" className="g__flex__row event__row">
+      <img src={event.img} className="event__img"/>
+      <div className="g__flex__col event__content__col">
+        <h4>{event.title}</h4>
+        <h4>{event.date}</h4>
         <p>{event.description}</p>
       </div>
-    </div>
+    </a>
   )
 }
 
 function EventList(props) {
   return (
-    <div>
+    <div className="g__flex__col event__col">
       {props.content.map((event) => (
         <Event event={event} />
       ))}
@@ -31,7 +52,7 @@ function EventList(props) {
 
 export default function EventsPage(props) {
   return (
-    <div className="g__page__wrapper">
+    <div className="g__page__wrapper events">
       <PageHeader 
         pageIndicator="Events"
         title="We always like to share what we know"
@@ -39,6 +60,7 @@ export default function EventsPage(props) {
         That’s why we regularly host events to increase the number of design opportunities in our community."
       />
       <h2>Our events</h2>
+      <p>Looking to partner? <a className="g__ex__link lets__talk" target="_blank" href="">Lets talk &#x2192;</a></p>
       <EventList content={eventContent}/>
     </div>
   )

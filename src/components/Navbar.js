@@ -23,15 +23,15 @@ const PAGES = [
   name: 'Events',
   slug: 'events'
 }, {
-  name: 'Chapters',
-  slug: 'chapters'
+  name: 'Extensions',
+  slug: 'extensions'
 }, {
   name: 'Clients',
   slug: 'clients'
 }, {
   name: 'Apply',
   slug: 'apply'
-}
+},
 ];
 
 

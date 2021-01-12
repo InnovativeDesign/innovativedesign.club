@@ -2,23 +2,51 @@ import React from 'react';
 import PageHeader from '../components/PageHeader'
 import "../css/pages/decals.scss"
 
+const widgetContent = [
+  {          
+    title: "Intro to Photoshop & Illustrator",
+    src: "/img/decal/Photoshop-Decal.png",
+    description: "In this class we teach the basics of how to use Adobe Illustrator and Photoshop. Don’t have it? Don’t worry! As a UC Berkeley student you have access to it for free. We also touch on the basics of graphic design and branding.",
+    behance: "",
+    apply:"https://coryrylan.com/blog/css-gap-space-with-flexbox",
+  },
+  {          
+    title: "Graphic Design Principles",
+    src: "/img/decal/Graphic-Decal.png",
+    description: "Already know Adobe Illustrator and Photoshop? Want to learn more about graphic Design? This class is perfect for you! We touch on a variety on styles and principles in this class. ",
+    behance: "",
+    apply:"https://coryrylan.com/blog/css-gap-space-with-flexbox",
+  },
+  {          
+    title: "Photography Principles",
+    src: "/img/decal/Photography-Decal.png",
+    description: "Always wanted to learn how to use a camera? Already know how to? Doesn’t matter! We will teach you how to shoot in manual and a variety of styles to go with it. This class is the perfect excuse to finally learn the settings on your camera and to broaden the way you think when you hold the camera.",
+    behance: "",
+    apply:"https://coryrylan.com/blog/css-gap-space-with-flexbox",
+  },
+
+]
+
 // props:
 // src
 // title
 // description
 // href
 function Widget(props) {
+  const widget = props.widget
   return (
-    <a className="decal__widget" href="https://stackoverflow.com/questions/2789703/remove-stubborn-underline-from-link" target="blank">
-      <img className="decal__widget__img" src={props.src} />
+    <a className="decal__widget" href={widget.behance} target="blank">
+      <img className="decal__widget__img" src={widget.src} />
       <div className="decal__widget__content">
-        <h4>{props.title}</h4>
-        <p style={{minHeight:"17em"}}>{props.description}</p>
-        <a href={props.href} className="g__ex__link" target="_blank" style={{color: "black"}}>Apply &#x2192;</a>
+        <h4>{widget.title}</h4>
+        <p style={{minHeight:"17em"}}>{widget.description}</p>
+        <a href={widget.apply} className="g__ex__link" target="_blank" style={{color: "black"}}>Apply &#x2192;</a>
       </div>
     </a>
   )
 }
+
+
 
 export default function DecalsPage(props) {
   return (
@@ -31,7 +59,10 @@ export default function DecalsPage(props) {
         We open applications at the beginning of each semester. "
       />
       <div className="g__flex__row decal__widget__wrapper">
-        <Widget 
+        {widgetContent.map((widget) => (
+          <Widget widget={widget}/>
+        ))}
+        {/* <Widget 
           title="Intro to Photoshop & Illustrator"
           src="/img/decal/Photoshop-Decal.png"
           description="In this class we teach the basics of how to use Adobe Illustrator and Photoshop. 
@@ -54,7 +85,7 @@ export default function DecalsPage(props) {
           Doesn’t matter! We will teach you how to shoot in manual and a variety of styles to go with it. 
           This class is the perfect excuse to finally learn the settings on your camera and to broaden the way you think when you hold the camera."
           href="https://coryrylan.com/blog/css-gap-space-with-flexbox"
-        />
+        /> */}
       </div>
     </div>
 

@@ -37,7 +37,7 @@ export default function ApplyPage(props) {
         links={[
           { name: "Club", href: "https://www.mcdonalds.com/us/en-us.html" },
           { name: "DeCal", href: "https://www.mcdonalds.com/us/en-us.html" },
-          { name: "Chapter", href: "https://www.mcdonalds.com/us/en-us.html" },
+          { name: "Extensions", href: "https://www.mcdonalds.com/us/en-us.html" },
         ]}
       />
       <LinkRow

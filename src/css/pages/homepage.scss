@@ -99,6 +99,10 @@ $pagecard-img-height: $global-max-width/3.8;
     // background-color: blue;
     .page__card {
         max-height: $pagecard-img-height;
+        &:hover {
+            // background-color: grey;
+            color: #f27459;
+        }
     }
     .banner__row {
         justify-content: flex-start;

@@ -32,9 +32,23 @@ function SectionTwo(props) {
 }
 
 const bannerContent = [
-  {title: "decals", img: "/img/homepage/DECALS-IMG.png", description: "We offer three student-led courses every semester to help beginners learn graphic design or photography principles.", to:"/decals"},
-  {title: "events", img: "/img/homepage/EVENTS-IMG.png", description: "We hold various semesterly events by inviting industry creative professionals.", to:"/events",flip: "true"},
-  {title: "extensions", img: "/img/homepage/EXTENSIONS-IMG.png", description: "We mentor and provide resources to help students at other universities start their own Innovative Design chapter.", to:"/chapters"},
+  {
+    title: "decals", 
+    img: "/img/homepage/DECALS-IMG.png", 
+    description: "We offer three student-led courses every semester to help beginners learn graphic design or photography principles.", 
+    to:"/decals"
+  }, {
+    title: "events",
+    img: "/img/homepage/EVENTS-IMG.png",
+    description: "We hold various semesterly events by inviting industry creative professionals.",
+    to:"/events",
+    flip: "true"
+  }, {
+    title: "extensions", 
+    img: "/img/homepage/EXTENSIONS-IMG.png", 
+    description: "We mentor and provide resources to help students at other universities start their own Innovative Design chapter.", 
+    to:"/chapters"
+  },
 ]
 
 function PageCard(props) {

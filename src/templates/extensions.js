@@ -1,15 +1,12 @@
 import React from 'react';
 import PageHeader from '../components/PageHeader'
 
-export default class ChapterPage extends React.Component {
-
-  render() {
-
+export default function ExtensionsPage(props) {
     return (
-      <div className="club">
+        <div className="club">
         <div className="g__page__wrapper">
           <PageHeader
-            pageIndicator="Chapters"
+            pageIndicator="Extensions"
             title="InnoD at your campus"
             description="Launched in 2020, Innovative Design's University Extension 
           Program is an initiative started to extend our mission of bringing together 
@@ -61,18 +58,5 @@ export default class ChapterPage extends React.Component {
           </div>
         </div>
       </div>
-    );
-  }
+    )
 }
-
-export const pageQuery = graphql`
-  query ExtensionQuery($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
-      html
-      frontmatter {
-        hero_heading
-        hero_subheading
-      }
-    }
-  }
-`;

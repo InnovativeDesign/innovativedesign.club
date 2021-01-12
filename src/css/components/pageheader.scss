@@ -2,7 +2,7 @@
 
 @keyframes slideInFromLeft {
     0% {
-        transform: translateX(-30%);
+        transform: translateX(-50%);
     }
     100% {
         transform: translateX(0);
@@ -15,7 +15,7 @@
 }
 
 .page__indicator {
-    animation: .8s ease 0s 1 slideInFromLeft;
+    animation: 1s ease 0s 1 slideInFromLeft;
     animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
     line-height: 50px;
     font-weight: 700;
