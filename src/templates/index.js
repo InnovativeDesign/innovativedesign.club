@@ -19,7 +19,9 @@ function SectionTwo(props) {
         <div className="g__flex__row" style={{justifyContent: "center"}}>
           {row.map((item) => (
             <FloatIn 
-            content = {item.content.startsWith("/") ? <img src={item.content}/> : <h2 style={{fontFamily: item.font}}>{item.content}</h2>}
+            content = {item.content.startsWith("/") ? 
+            <img src={item.content}/> : 
+            <div className="l__text" style={{fontFamily: item.font}}>{item.content}</div>}
             dir = {item.dir}
             />
           ))}
@@ -29,9 +31,42 @@ function SectionTwo(props) {
   )
 }
 
+const bannerContent = [
+  {title: "decals", img: "/img/homepage/DECALS-IMG.png", description: "We offer three student-led courses every semester to help beginners learn graphic design or photography principles.", to:"/decals"},
+  {title: "events", img: "/img/homepage/EVENTS-IMG.png", description: "We hold various semesterly events by inviting industry creative professionals.", to:"/events",flip: "true"},
+  {title: "extensions", img: "/img/homepage/EXTENSIONS-IMG.png", description: "We mentor and provide resources to help students at other universities start their own Innovative Design chapter.", to:"/chapters"},
+]
+
+function PageCard(props) {
+  const banner = props.banner
+  return (
+    <div className="page__card">
+      {banner.flip ? 
+      <div className="g__flex__row banner__row" >
+        <p className="banner__desc"> {banner.description} </p>
+        <img src={banner.img} className="banner__img"/>
+      </div>
+      : 
+      <div className="g__flex__row banner__row" >
+        <img src={banner.img} className="banner__img"/>
+        <p className="banner__desc"> {banner.description} </p>
+      </div>
+      }
+      <div className="banner__title translate__y">
+        <Link className="banner__title" to={banner.to}>
+          {banner.title}
+        </Link>
+      </div>
+    </div>
+  )
+}
+
 function SectionThree(props) {
   return (
     <div className="section__three">
+      {props.content.map((banner) => (
+        <PageCard banner={banner}/>
+      ))}
     </div>
   )
 }
@@ -53,7 +88,7 @@ export default function IndexPage(props) {
         </div>
       <SectionTwo content={floatContent}/>
       <hr className="vertical__line"/>
-      <SectionThree />
+      <SectionThree content={bannerContent}/>
     </div>
 
   )
