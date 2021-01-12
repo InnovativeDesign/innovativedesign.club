@@ -22,7 +22,7 @@ export default function ExtensionsPage(props) {
               an agency at an accredited university with a goal of being part our extensive
               Innovative Design network.
             </p>
-              <a href="https://innodatusc.webflow.io/#club" target="__blank">InnoD @ USC</a>
+              <a href="https://innodatusc.com" target="__blank">InnoD @ USC</a>
             </div>
           </div>
           <div className={`team__block team__block-right`}>

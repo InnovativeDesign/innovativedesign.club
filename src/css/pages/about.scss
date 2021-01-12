@@ -1,4 +1,23 @@
 // About
+@import '../variables';
+
+
+.fade__in {
+    opacity: 1;
+    transform: translateY(1em);
+    visibility: visible;
+    transition: opacity 200ms ease-out, transform 200ms ease-out, visibility 200ms ease-out;
+    will-change: opacity, transform, visibility;
+    padding-bottom: 1em;
+}
+
+.faq__question {
+  color:black;
+  &:hover {
+    color:black
+  }
+}
+
 
 .about {
   max-width: $global-max-width;
