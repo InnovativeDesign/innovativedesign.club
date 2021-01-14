@@ -44,58 +44,165 @@ const faqContent = [
   },
 ]
 
-function FAQuestion(props) {
-  const faq = props.faq
-  const [isOpen, setIsOpen] = useState(false)
-  return (
-    <div>
-      <a className="g__ex__link faq__question" href="javascript:;" onClick={() => setIsOpen(!isOpen)}>{faq.question}</a>
-      {isOpen ? <p className="fade__in">{faq.answer}</p> : <p></p>}
-    </div>
 
+function FAQ(props) {
+  function FAQuestion(props) {
+    const faq = props.faq
+    const [isOpen, setIsOpen] = useState(false)
+    return (
+      <div>
+        <a className="g__ex__link faq__question" href="javascript:;" onClick={() => setIsOpen(!isOpen)}>{faq.question}</a>
+        {isOpen ? <p className="fade__in">{faq.answer}</p> : <p></p>}
+      </div>
+  
+    )
+  }
+  return (
+    <div className="g__flex__col">
+      {props.content.map((faq) => (
+        <FAQuestion faq={faq} />
+      ))}
+    </div>
+  )
+}
+
+const valuesContent = [
+  {
+    title: "Accessibility",
+    img: "/img/about/ACCESSIBILITY.png",
+    description: "We promote and value the personal and creative growth of our members. We are always learning and helping others."
+  },
+  {
+    title: "Diversity",
+    img: "/img/about/DIVERSITY.png",
+    description: "We value exploration and curiosity for learning. We are eager to learn from our community."
+  },
+  {
+    title: "Community",
+    img: "/img/about/COMMUNITY.png",
+    description: "We welcome new ideas and diverse thinking. We strive to question the status quo and think outside of the box."
+  },
+]
+
+function Values(props) {
+  function ValueItem(props) {
+    const value = props.value
+    return (
+      <div className="g__flex__col value__widget">
+        <img className="value__img" src={value.img} />
+        <h3>{value.title}</h3>
+        <p>{value.description}</p>
+      </div>
+    )
+  }
+  return (
+    <div className="g__flex__row values">
+      {props.content.map((value) => (
+        <ValueItem value={value}/>
+      ))}
+    </div>
+  )
+}
+
+const teamsContent = [
+  {
+    title: "Design",
+    description: "Our Gold Design Team designers work with on campus organizations for a variety of graphic design related servies. From flyers, banners, logos, and more we provide pro-bono services to support our student and local communities. In addition, teams focus on portfolio development for members through personal projects and workshops for skill building.",
+    img: "/img/about/DESIGN-GOLD.png",
+    extra: "Gold",
+    extraColor: "#D4AF37",
+  },
+  {
+    title: "Design",
+    description: "Our Blue Design Team designers work with off campus clients for industry level design work. This team provides branding packages and other design services to proffesional clients.",
+    img: "/img/about/DESIGN-BLUE.jpg",
+    extra: "Blue",
+    extraColor: "#0038C9",
+  },
+  {
+    title: "Photo",
+    description: "Our photo teams cover events and photoshoots for on-campus organizations. They meet during the week, as a team, to shoot for your personal portfolio, receive instruction, and build a community with photographers.",
+    img: "/img/about/PHOTO.jpg",
+    extra: "",
+    extraColor: "",
+  },
+  {
+    title: "Web",
+    description: "Hone your design and development skills as you create layout mockups and build websites for clients.",
+    img: "",
+    extra: "",
+    extraColor: "",
+  },
+]
+
+function Teams(props) {
+  function Team(props) {
+    const team = props.team
+    return (
+      <div className="g__flex__row team__widget">
+        <div className="g__flex__col team__widget__col">
+          <h3>{team.title} {team.extra ? <h3 style={{color: team.extraColor, display: "inline-block"}}> | {team.extra}</h3> : <h3></h3>}</h3>
+          <p>{team.description}</p>
+        </div>
+        <img className="team__img" src={team.img} />
+      </div>
+    )
+  }
+  return (
+    <div className="g__flex__col teams">
+      {props.content.map((team) => (
+        <Team team={team}/>
+      ))}
+    </div>
   )
 }
 
 export default function AboutPage(props) {
   const { officers } = props.data.markdownRemark.frontmatter;
-    const images = props.data.allFile.edges.reduce((obj, edge) => {
-      if (!edge.node.childImageSharp) return obj;
-      const resolutions = edge.node.childImageSharp.resolutions;
-      obj[resolutions.originalName] = resolutions;
-      return obj;
-    }, {});
+  const images = props.data.allFile.edges.reduce((obj, edge) => {
+    if (!edge.node.childImageSharp) return obj;
+    const resolutions = edge.node.childImageSharp.resolutions;
+    obj[resolutions.originalName] = resolutions;
+    return obj;
+  }, {});
 
-    return (
-      <div className="about">
-        <PageHeader 
-          pageIndicator="About"
-          title="Leadership"
-          description="Our club and DeCals are led by the Officer Board. 
+  return (
+    <div className="about">
+      <PageHeader
+        pageIndicator="About"
+        title="Leadership"
+        description="Our club and DeCals are led by the Officer Board. 
           Each VP presides over an aspect of our club’s operation in addition to leading a 
           Design or Photography team."
-        />
-        <div className="officer__container">
-          {officers.map((officer) => {
-            const originalName = officer.image.substring(officer.image.lastIndexOf('/') + 1);
-            return (<Officer
-              info={officer}
-              image={images[originalName]}
-            />);
-          })}
-          {
-            Array(6 - officers.length % 6).fill(0).map(() =>
-              <div className="officer__block officer__block-empty" />
-            )
-          }
-        </div>
-        <h2>FAQ</h2>
-        <div className="g__flex__col">
-          {faqContent.map((faq) => (
-            <FAQuestion faq={faq}/>
-          ))}
-        </div>
+      />
+      <h2>Values</h2>
+      <Values content={valuesContent}/>
+      <h2>Teams</h2>
+      <Teams content={teamsContent}/>
+      <div className="officer__container">
+        {officers.map((officer) => {
+          const originalName = officer.image.substring(officer.image.lastIndexOf('/') + 1);
+          return (<Officer
+            info={officer}
+            image={images[originalName]}
+          />);
+        })}
+        {
+          Array(6 - officers.length % 6).fill(0).map(() =>
+            <div className="officer__block officer__block-empty" />
+          )
+        }
       </div>
-    );
+      <h2>FAQ</h2>
+      {/* <div className="g__flex__col">
+        {faqContent.map((faq) => (
+          <FAQuestion faq={faq} />
+        ))}
+      </div> */}
+      <FAQ content={faqContent}/>
+
+    </div>
+  );
 }
 
 export const pageQuery = graphql`

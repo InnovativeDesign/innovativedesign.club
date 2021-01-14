@@ -4,20 +4,14 @@
     .our__services {
         min-height: auto;
         padding-bottom: 50px;
-        // padding: 50px 0px;
-    }
-    .service__widget {
-        // justify-content: flex-start;
-        align-items: flex-start;
-        gap: 20px;
     }
     .service__row {
         gap: 50px;
-        flex-basis: 100%;
-        // flex: 1 1 0px;
-        flex-grow: 1;
-        flex-shrink: 1;
-        flex-basis: 0px;
+        .service__widget {
+            flex: 1 1 0px;
+            align-items: flex-start;
+            gap: 20px;
+        }
         
     }
     .process {

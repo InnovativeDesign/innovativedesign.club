@@ -1,23 +1,54 @@
 // About
-@import '../variables';
-
+@import "../variables";
 
 .fade__in {
-    opacity: 1;
-    transform: translateY(1em);
-    visibility: visible;
-    transition: opacity 200ms ease-out, transform 200ms ease-out, visibility 200ms ease-out;
-    will-change: opacity, transform, visibility;
-    padding-bottom: 1em;
+  opacity: 1;
+  transform: translateY(1em);
+  visibility: visible;
+  transition: opacity 200ms ease-out, transform 200ms ease-out, visibility 200ms ease-out;
+  will-change: opacity, transform, visibility;
+  padding-bottom: 1em;
 }
 
 .faq__question {
-  color:black;
+  color: black;
   &:hover {
-    color:black
+    color: black;
   }
 }
 
+.values {
+  padding-top: 20px;
+  align-items: flex-start;
+  gap: 20px;
+  .value__widget {
+    gap: 20px;
+    flex: 1 1 0px;
+    .value__img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.teams {
+  align-items: flex-start;
+  .team__widget {
+    align-items: flex-start;
+    gap: 50px;
+    .team__widget__col {
+      flex: 1 1 0px;
+    }
+    .team__img {
+      object-fit: contain;
+      flex: 1 1 0px;
+      // max-width: $global-max-width/2;
+      // height: auto;
+      max-height: $global-max-width/4;
+      width: auto;
+    }
+  }
+}
 
 .about {
   max-width: $global-max-width;
@@ -59,7 +90,8 @@
       width: 100%;
     }
 
-    h4, p {
+    h4,
+    p {
       margin: 0 0 0 0;
     }
 

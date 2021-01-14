@@ -10,7 +10,7 @@
     background-color: #F8F7F2;
     gap: 50px;
     .event__img {
-      width: $global-max-width/3;
+      max-width: $global-max-width/3;
       height: auto;
     }
     .event__content__col {

@@ -21,13 +21,23 @@ const serviceContent = [
   },
 ]
 
-function ServiceWidget(props) {
-  const service = props.service
+
+function Services(props) {
+  function ServiceWidget(props) {
+    const service = props.service
+    return (
+      <div className="g__flex__col service__widget" >
+        <img src={service.img} />
+        <h4>{service.title}</h4>
+        <p>{service.description}</p>
+      </div>
+    )
+  }
   return (
-    <div className="g__flex__col service__widget" >
-      <img src={service.img} />
-      <h4>{service.title}</h4>
-      <p>{service.description}</p>
+    <div className="g__flex__row service__row">
+      {props.content.map((service) => (
+        <ServiceWidget service={service} />
+      ))}
     </div>
   )
 }
@@ -66,27 +76,27 @@ const projectPics = [
   },
 ]
 
-function Process(props) {
-  const process = props.process
-  return (
-    <div className="g__flex__row process__row">
-      <div className="g__flex__col process__num__col">
-        <h2 className="process__num">{process.num}</h2>
-        <hr className="process__vertical__line" />
-      </div>
-      <div className="g__flex__col">
-        <h4>{process.title}</h4>
-        <p>{process.description}</p>
-        {process.button ?
-          <Link className="link__button">{process.button}</Link> 
-          : 
-          <div></div>}
-      </div>
-    </div>
-  )
-}
 
 function ProcessList(props) {
+  function Process(props) {
+    const process = props.process
+    return (
+      <div className="g__flex__row process__row">
+        <div className="g__flex__col process__num__col">
+          <h2 className="process__num">{process.num}</h2>
+          <hr className="process__vertical__line" />
+        </div>
+        <div className="g__flex__col">
+          <h4>{process.title}</h4>
+          <p>{process.description}</p>
+          {process.button ?
+            <Link className="link__button">{process.button}</Link>
+            :
+            <div></div>}
+        </div>
+      </div>
+    )
+  }
   return (
     <div className="g__page__wrapper process__list">
       <h2>Process</h2>
@@ -104,7 +114,7 @@ function PastList(props) {
     <div className="g__flex__row pic__list">
       {props.pics.map((pic) => (
         <a href={pic.href}>
-          <img src={pic.img} className="pic__img"/>
+          <img src={pic.img} className="pic__img" />
         </a>
       ))}
     </div>
@@ -123,22 +133,18 @@ export default function ClientPage() {
           organizations and university programs."
         />
         <h1>Our services</h1>
-        <div className="g__flex__row service__row">
-          {serviceContent.map((service) => (
-            <ServiceWidget service={service} />
-          ))}
-        </div>
+        <Services content={serviceContent} />
       </div>
       <div className="process">
         <ProcessList content={processContent} />
       </div>
       <div className="g__page__wrapper previous">
-        <PageHeader 
+        <PageHeader
           title="Previous Work"
           description="Some of the branding, photography, and website design and development work for previous clients."
         />
         <a className="g__ex__link view__projects" href="https://developer.mozilla.org/en-US/docs/web/javascript/reference/statements/export" target="_blank">View all projects &#x2192;</a>
-        <PastList pics={projectPics}/>
+        <PastList pics={projectPics} />
       </div>
     </div>
   )
