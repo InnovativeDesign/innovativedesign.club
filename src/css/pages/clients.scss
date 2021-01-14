@@ -1,4 +1,11 @@
+@import '../variables';
+
 .clients {
+    .our__services {
+        min-height: auto;
+        padding-bottom: 50px;
+        // padding: 50px 0px;
+    }
     .service__widget {
         // justify-content: flex-start;
         align-items: flex-start;
@@ -12,5 +19,59 @@
         flex-shrink: 1;
         flex-basis: 0px;
         
+    }
+    .process {
+        background-color: $sp21beige;
+        .process__list {
+            padding: 50px 0px;
+            min-height: auto;
+        }
+        .process__row {
+            justify-content: flex-start;
+            gap: 50px;
+            .process__num__col {
+                align-items: center;
+                min-width: 4em;
+                .process__num {
+                    min-width: 1em;
+                    color: $sp21orange;
+                }
+                .process__vertical__line {
+                    width: 2px;
+                    height: 50px;
+                    background-color: $sp21orange;
+                }
+            }
+            .link__button{
+                padding: 10px 25px;
+                border-radius: 3px;
+                text-decoration: none;
+                transition: 0.2s ease all;
+                box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+                text-decoration: none;
+                color: white;
+                max-width: 13em;
+                background-color: $sp21blue;
+                &:hover {
+                    text-decoration: none;
+                    background-color: #002177;
+                }
+            }
+        }   
+    }
+    .previous {
+        min-height: 0px;
+        padding: 50px 0px;
+        .view__projects {
+            color:black;
+        }
+        .pic__list {
+            padding-top: 50px;
+            gap: 50px;
+            .pic__img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
     }
 }

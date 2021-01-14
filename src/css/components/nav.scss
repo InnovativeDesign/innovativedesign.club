@@ -1,5 +1,5 @@
 // Navigation
-$navbar-color: white;
+@import '../variables';
 
 .nav {
   @include clearfix();
@@ -66,6 +66,7 @@ $navbar-color: white;
 
       &.sp21 {
         color: $sp21blue;
+        // color: white;
       }
 
       &.sp21::after {
@@ -78,7 +79,7 @@ $navbar-color: white;
 
         /* Setting different color than 
            that of original text  */
-        color: $navbar-color;
+        // color: $navbar-color;
         color: white;
         background-color: $navbar-color;
         overflow: hidden;
