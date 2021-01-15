@@ -1,28 +1,29 @@
 import React from 'react';
 import PageHeader from '../components/PageHeader'
 import "../css/pages/decals.scss"
+import { applyDecalAI, applyDecalGDP, applyDecalPHOTO, behanceDecal, behanceClub } from '../utils/links'
 
 const widgetContent = [
   {          
     title: "Intro to Photoshop & Illustrator",
     src: "/img/decal/Photoshop-Decal.png",
     description: "In this class we teach the basics of how to use Adobe Illustrator and Photoshop. Don’t have it? Don’t worry! As a UC Berkeley student you have access to it for free. We also touch on the basics of graphic design and branding.",
-    behance: "",
-    apply:"https://coryrylan.com/blog/css-gap-space-with-flexbox",
+    behance: behanceDecal,
+    apply: applyDecalAI,
   },
   {          
     title: "Graphic Design Principles",
     src: "/img/decal/Graphic-Decal.png",
     description: "Already know Adobe Illustrator and Photoshop? Want to learn more about graphic Design? This class is perfect for you! We touch on a variety on styles and principles in this class. ",
-    behance: "",
-    apply:"https://coryrylan.com/blog/css-gap-space-with-flexbox",
+    behance: behanceDecal,
+    apply: applyDecalGDP,
   },
   {          
     title: "Photography Principles",
     src: "/img/decal/Photography-Decal.png",
     description: "Always wanted to learn how to use a camera? Already know how to? Doesn’t matter! We will teach you how to shoot in manual and a variety of styles to go with it. This class is the perfect excuse to finally learn the settings on your camera and to broaden the way you think when you hold the camera.",
-    behance: "",
-    apply:"https://coryrylan.com/blog/css-gap-space-with-flexbox",
+    behance: behanceDecal,
+    apply: applyDecalPHOTO,
   },
 
 ]

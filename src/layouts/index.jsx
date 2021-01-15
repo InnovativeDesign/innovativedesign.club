@@ -116,7 +116,7 @@ export default function RootLayout(props) {
             <link href="/pace.css" rel="stylesheet" />
           </Helmet>
     
-          <Navbar />
+          <Navbar isHome={props.location.pathname === "/"}/>
           {/* PUT CONTENT INTO COMPONENTS */}
           <div>
             {props.children({ ...props, widgetMeta: props.data })}

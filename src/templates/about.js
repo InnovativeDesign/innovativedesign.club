@@ -111,6 +111,8 @@ const teamsContent = [
     img: "/img/about/DESIGN-GOLD.png",
     extra: "Gold",
     extraColor: "#D4AF37",
+    applyLink: "",
+    requestLink: "",
   },
   {
     title: "Design",
@@ -118,6 +120,8 @@ const teamsContent = [
     img: "/img/about/DESIGN-BLUE.jpg",
     extra: "Blue",
     extraColor: "#0038C9",
+    applyLink: "",
+    requestLink: "",
   },
   {
     title: "Photo",
@@ -125,6 +129,8 @@ const teamsContent = [
     img: "/img/about/PHOTO.jpg",
     extra: "",
     extraColor: "",
+    applyLink: "",
+    requestLink: "",
   },
   {
     title: "Web",
@@ -132,6 +138,8 @@ const teamsContent = [
     img: "",
     extra: "",
     extraColor: "",
+    applyLink: "",
+    requestLink: "",
   },
 ]
 
@@ -143,6 +151,10 @@ function Teams(props) {
         <div className="g__flex__col team__widget__col">
           <h3>{team.title} {team.extra ? <h3 style={{color: team.extraColor, display: "inline-block"}}> | {team.extra}</h3> : <h3></h3>}</h3>
           <p>{team.description}</p>
+          <div className="team__widget__link__list">
+            <a href={team.applyLink} className="g__ex__link apply__link">Apply &#x2192;</a>
+            <a href={team.requestLink} className="g__ex__link apply__link">Request services &#x2192;</a>
+          </div>
         </div>
         <img className="team__img" src={team.img} />
       </div>

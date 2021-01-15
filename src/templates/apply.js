@@ -2,6 +2,7 @@ import React from 'react';
 import PageHeader from '../components/PageHeader'
 import Link from 'gatsby-link'
 import '../css/pages/apply.scss'
+import { applyClub, applyDecal, applyExtensions, applyPartner, applyRequest } from '../utils/links'
 
 function LinkRow(props) {
   return (
@@ -35,21 +36,21 @@ export default function ApplyPage(props) {
       <LinkRow
         title="For Students"
         links={[
-          { name: "Club", href: "https://www.mcdonalds.com/us/en-us.html" },
-          { name: "DeCal", href: "https://www.mcdonalds.com/us/en-us.html" },
-          { name: "Extensions", href: "https://www.mcdonalds.com/us/en-us.html" },
+          { name: "Club", href: applyClub },
+          { name: "DeCal", href: applyDecal },
+          { name: "Extensions", href: applyExtensions },
         ]}
       />
       <LinkRow
         title="For Organizations"
         links={[
-          { name: "Partner", href: "https://www.mcdonalds.com/us/en-us.html" },
+          { name: "Partner", href: applyPartner },
         ]}
       />
       <LinkRow
         title="For Clients"
         links={[
-          { name: "Submit a request", href: "https://www.mcdonalds.com/us/en-us.html" },
+          { name: "Submit a request", href: applyRequest },
         ]}
       />
     </div>

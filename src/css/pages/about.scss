@@ -33,11 +33,19 @@
 
 .teams {
   align-items: flex-start;
+  gap: 50px;
   .team__widget {
     align-items: flex-start;
     gap: 50px;
     .team__widget__col {
       flex: 1 1 0px;
+      .team__widget__link__list {
+        display: flex;
+        justify-content: space-between;
+        .apply__link {
+          color:black;
+        }
+      }
     }
     .team__img {
       object-fit: contain;

@@ -35,7 +35,8 @@ const PAGES = [
 ];
 
 
-export default function Navbar() {
+export default function Navbar(props) {
+  const isHome = props.isHome
   const [ navOpen, setNavOpen ] = useState(false)
   function _handleHamburger(e) {
     if (e) e.preventDefault()
@@ -44,7 +45,8 @@ export default function Navbar() {
   return (
     <div
       className={classNames("nav", {
-        "nav--open": navOpen
+        "nav--open": navOpen,
+        "home": isHome,
       })}
     >
       <div className="nav__wrapper">
@@ -64,7 +66,7 @@ export default function Navbar() {
           {PAGES.map((page) => {
             return (
               <Link
-                className="nav__item sp21"
+                className={`nav__item ${isHome ? "home" : "sp21"}`}
                 to={`/${page.slug}`}
                 onClick={() => _handleHamburger()}
                 key={page.slug}

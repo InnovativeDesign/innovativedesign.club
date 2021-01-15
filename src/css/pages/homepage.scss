@@ -24,6 +24,56 @@ $pagecard-img-height: $global-max-width/3.8;
     align-items: center;
     height: calc(100vh - 60px);
     width: 100%;
+    background-color: #DDD7D2;
+
+    .join__us__svg {
+        max-width: $global-max-width/9;
+        height: auto;
+    }
+
+    .graphics {
+        position: absolute;
+        z-index: 1;
+        left: 0px;
+        top: 0px;
+        #rachel {
+            position: absolute;
+            left: 0px;
+            width: $global-max-width/2;
+            height: auto;
+        }
+        #computer {
+            position: absolute;
+            left: calc(100vw - 360px);
+            top: calc(100vh - 530px - 60px);
+            width: 360px;
+            height: auto;
+        }
+        #bottom-left {
+            position: absolute;
+            // 60 IS NAVBAR-HEIGHT
+            top: calc(100vh - 125px - 60px);
+            height: 125px;
+            width: auto;
+        }
+        #bottom-right {
+            position: absolute;
+            // 60 IS NAVBAR-HEIGHT
+            top: calc(100vh - 226px - 60px);
+            left: $global-max-width/1.06;
+            height: 226px;
+            width: auto;   
+        }
+        #top-right {
+            position: absolute;
+            // 60 IS NAVBAR-HEIGHT
+            left: calc(100vw - 380px);
+            width: 380px;
+            height: auto;
+
+        }
+    }
+
     .home__button__wrapper {
         display: flex;
         min-width: 300px;
