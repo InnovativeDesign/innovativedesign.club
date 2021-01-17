@@ -20,7 +20,7 @@ function SectionTwo(props) {
           {row.map((item) => (
             <FloatIn
               content={item.content.startsWith("/") ?
-                <img src={item.content} /> :
+                <img className="float__img" src={item.content} /> :
                 <div className="l__text" style={{ fontFamily: item.font }}>{item.content}</div>}
               dir={item.dir}
             />
@@ -88,7 +88,7 @@ function SectionThree(props) {
 function SectionOne(props) {
   return (
     <div className="section__one">
-      <div className="g__flex__col" style={{ maxWidth: "50%", alignItems: "center" }}>
+      <div className="g__flex__col" style={{ maxWidth: "50%", alignItems: "center", zIndex:"1", }}>
         <img className="join__us__svg" src="/img/homepage/front/join-us.svg" />
         <h2 style={{ fontFamily: "Sporting" }}>Lets make something together.</h2>
         <p>Innovative Design is UC Berkeley’s premier creative agency.

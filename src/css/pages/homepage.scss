@@ -24,16 +24,20 @@ $pagecard-img-height: $global-max-width/3.8;
     align-items: center;
     height: calc(100vh - 60px);
     width: 100%;
-    background-color: #DDD7D2;
+    background-color: #ddd7d2;
 
     .join__us__svg {
-        max-width: $global-max-width/9;
+        max-width: $global-max-width/8;
         height: auto;
+        @media (max-width: 1024px) {
+            max-width: $global-max-width/3;
+            height: auto;
+        }
     }
 
     .graphics {
         position: absolute;
-        z-index: 1;
+        z-index: 0;
         left: 0px;
         top: 0px;
         #rachel {
@@ -44,9 +48,11 @@ $pagecard-img-height: $global-max-width/3.8;
         }
         #computer {
             position: absolute;
-            left: calc(100vw - 360px);
-            top: calc(100vh - 530px - 60px);
-            width: 360px;
+            // left: calc(100vw - 360px);
+            // top: calc(100vh - 530px - 60px);
+            right: -100vw;
+            bottom: -90vh;
+            width: $global-max-width/3;
             height: auto;
         }
         #bottom-left {
@@ -62,7 +68,7 @@ $pagecard-img-height: $global-max-width/3.8;
             top: calc(100vh - 226px - 60px);
             left: $global-max-width/1.06;
             height: 226px;
-            width: auto;   
+            width: auto;
         }
         #top-right {
             position: absolute;
@@ -70,11 +76,11 @@ $pagecard-img-height: $global-max-width/3.8;
             left: calc(100vw - 380px);
             width: 380px;
             height: auto;
-
         }
     }
 
     .home__button__wrapper {
+        z-index: 1;
         display: flex;
         min-width: 300px;
         width: 70%;
@@ -115,6 +121,9 @@ $pagecard-img-height: $global-max-width/3.8;
     font-size: 90px;
     color: black;
     text-decoration: none;
+    @media (max-width: 640px) {
+        font-size: 50px;
+    }
 }
 
 .section__two {
@@ -127,7 +136,10 @@ $pagecard-img-height: $global-max-width/3.8;
     gap: 20px;
     padding-bottom: 100px;
     // height: 150%;
-    img {
+    .float__img {
+        @media (max-width: 1024px) {
+            display: none;
+        }
         padding: 0px 48px;
     }
 }
@@ -163,7 +175,7 @@ $pagecard-img-height: $global-max-width/3.8;
         font-size: 90px;
         font-weight: 200;
         color: black;
-        transition: color ease-in .2s;
+        transition: color ease-in 0.2s;
         will-change: color;
         &:hover {
             color: #f27459;
