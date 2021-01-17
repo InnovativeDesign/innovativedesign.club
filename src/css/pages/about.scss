@@ -58,6 +58,52 @@
   }
 }
 
+.officers {
+  align-items: flex-start;
+  justify-items: flex-start;
+  justify-content: center;
+  max-width: $global-max-width;
+  flex-wrap: wrap;
+  overflow-x: hidden;
+  text-align: center;
+  gap: 1px;
+  .officer__widget {
+    gap: 10px;
+
+    width: $global-max-width/5;
+    .officer__widget__square {
+      .officer__widget__img {
+        object-fit: contain;
+        max-width: $global-max-width/5;
+        height: auto;
+      }
+      .officer__widget__phrase {
+        padding: 10px;
+        height: 100%; // TODO: why?
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: 0.2s ease all;
+        color: white;
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+    .officer__widget__name {
+      max-width: $global-max-width/5;
+    }
+    .officer__widget__position {
+      max-width: $global-max-width/5;
+    }
+  }
+}
+
 .about {
   max-width: $global-max-width;
   // padding: 0 5% 0 5%;

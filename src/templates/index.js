@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React from 'react';
 import Link from 'gatsby-link'
 import '../css/pages/homepage.scss'
 import FloatIn from '../components/FloatIn'

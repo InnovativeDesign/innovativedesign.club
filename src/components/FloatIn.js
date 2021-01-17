@@ -5,8 +5,6 @@ import '../css/components/floatin.scss'
 export default function FadeInSection(props) {
     const [isVisible, setVisible] = useState(true);
     const domRef = useRef();
-    // const direction = assignDirection(props.direction)
-    // console.log(direction)
     useEffect(() => {
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => setVisible(entry.isIntersecting));

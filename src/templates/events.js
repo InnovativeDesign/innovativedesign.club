@@ -7,21 +7,21 @@ const eventContent = [
     title: "HEX: Hone & Explore", 
     img:"/img/events/HEX-IMG.png", 
     description: "A weekend of free, virtual workshops where students can learn various creative skills.",
-    date: "2/1 - 2/3",
+    date: "Date: TBD",
     href: "https://hex.innovativedesign.club/"
   },
   {
     title: "CMYK: Come Make Your Mark",
     img:"/img/events/CMYK-IMG.png",
     description: "A designathon and day of learning and practicing design through a series of talks and friendly competition.",
-    date: "2/1 - 2/3",
+    date: "Date: TBD",
     href: "https://cmyk.innovativedesign.club/"
   },
   {
     title: "RGB: Reach, Grow, Build",
     img:"/img/events/RGB-IMG.png",
     description: "A day of learning from industry designers through a series of talks, workshops, and open Q&A.",
-    date: "2/1 - 2/3",
+    date: "Date: TBD",
     href: "https://rgb.innovativedesign.club/"
   },
 ]

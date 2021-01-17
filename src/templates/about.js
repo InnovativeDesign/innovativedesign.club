@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
+import { off } from 'superagent';
 import Hero from '../components/Hero';
-import Officer from '../components/Officer';
+// import Officer from '../components/Officer';
 import PageHeader from '../components/PageHeader'
 import '../css/pages/about.scss'
 import '../css/_base.scss'
+import { officerContent } from '../utils/aboutContent'
+import Img from 'gatsby-image'
 
 const faqContent = [
   {
@@ -54,7 +57,7 @@ function FAQ(props) {
         <a className="g__ex__link faq__question" href="javascript:;" onClick={() => setIsOpen(!isOpen)}>{faq.question}</a>
         {isOpen ? <p className="fade__in">{faq.answer}</p> : <p></p>}
       </div>
-  
+
     )
   }
   return (
@@ -98,7 +101,7 @@ function Values(props) {
   return (
     <div className="g__flex__row values">
       {props.content.map((value) => (
-        <ValueItem value={value}/>
+        <ValueItem value={value} />
       ))}
     </div>
   )
@@ -135,7 +138,7 @@ const teamsContent = [
   {
     title: "Web",
     description: "Hone your design and development skills as you create layout mockups and build websites for clients.",
-    img: "",
+    img: "/img/about/WEB.jpg",
     extra: "",
     extraColor: "",
     applyLink: "",
@@ -149,7 +152,7 @@ function Teams(props) {
     return (
       <div className="g__flex__row team__widget">
         <div className="g__flex__col team__widget__col">
-          <h3>{team.title} {team.extra ? <h3 style={{color: team.extraColor, display: "inline-block"}}> | {team.extra}</h3> : <h3></h3>}</h3>
+          <h3>{team.title} {team.extra ? <h3 style={{ color: team.extraColor, display: "inline-block" }}> | {team.extra}</h3> : <h3></h3>}</h3>
           <p>{team.description}</p>
           <div className="team__widget__link__list">
             <a href={team.applyLink} className="g__ex__link apply__link">Apply &#x2192;</a>
@@ -163,20 +166,46 @@ function Teams(props) {
   return (
     <div className="g__flex__col teams">
       {props.content.map((team) => (
-        <Team team={team}/>
+        <Team team={team} />
+      ))}
+    </div>
+  )
+}
+
+function Officers(props) {
+  console.log("wht rerender?")
+
+  function Officer(props) {
+    const officer = props.officer
+    return (
+      <div className="g__flex__col officer__widget">
+        <div className="officer__widget__square">
+          <img src={officer.img} className="officer__widget__img"/>
+          <p className="officer__widget__phrase">{officer.phrase}</p>
+        </div>
+        <h4 className="officer__widget__name">{officer.name}</h4>
+        <p className="officer__widget__position">{officer.position}</p>
+      </div>
+    )
+  }
+
+  return (
+    <div className="g__flex__row officers">
+      {props.content.map((officer) => (
+        <Officer officer={officer} />
       ))}
     </div>
   )
 }
 
 export default function AboutPage(props) {
-  const { officers } = props.data.markdownRemark.frontmatter;
-  const images = props.data.allFile.edges.reduce((obj, edge) => {
-    if (!edge.node.childImageSharp) return obj;
-    const resolutions = edge.node.childImageSharp.resolutions;
-    obj[resolutions.originalName] = resolutions;
-    return obj;
-  }, {});
+  // const { officers } = props.data.markdownRemark.frontmatter;
+  // const images = props.data.allFile.edges.reduce((obj, edge) => {
+  //   if (!edge.node.childImageSharp) return obj;
+  //   const resolutions = edge.node.childImageSharp.resolutions;
+  //   obj[resolutions.originalName] = resolutions;
+  //   return obj;
+  // }, {});
 
   return (
     <div className="about">
@@ -188,10 +217,13 @@ export default function AboutPage(props) {
           Design or Photography team."
       />
       <h2>Values</h2>
-      <Values content={valuesContent}/>
+      <Values content={valuesContent} />
       <h2>Teams</h2>
-      <Teams content={teamsContent}/>
-      <div className="officer__container">
+      <Teams content={teamsContent} />
+      <h2>Officers</h2>
+      < Officers content={officerContent} />
+
+      {/* <div className="officer__container">
         {officers.map((officer) => {
           const originalName = officer.image.substring(officer.image.lastIndexOf('/') + 1);
           return (<Officer
@@ -204,14 +236,14 @@ export default function AboutPage(props) {
             <div className="officer__block officer__block-empty" />
           )
         }
-      </div>
+      </div> */}
       <h2>FAQ</h2>
       {/* <div className="g__flex__col">
         {faqContent.map((faq) => (
           <FAQuestion faq={faq} />
         ))}
       </div> */}
-      <FAQ content={faqContent}/>
+      <FAQ content={faqContent} />
 
     </div>
   );
