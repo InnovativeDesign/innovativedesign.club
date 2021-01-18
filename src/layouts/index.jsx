@@ -34,6 +34,7 @@ export default function RootLayout(props) {
           />
     
           <Helmet>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             <meta
               name="description"
               content="Cal's student run creative agency, on a mission to make Berkeley beautiful."

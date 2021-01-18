@@ -7,10 +7,12 @@
     }
     .service__row {
         gap: 50px;
+        align-items: flex-start;
         .service__widget {
-            flex: 1 1 0px;
+            // flex: 1 1 0px;
             align-items: flex-start;
             gap: 20px;
+            flex-basis: 100%;
         }
         
     }

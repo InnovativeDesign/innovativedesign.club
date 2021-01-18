@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'gatsby-link'
 import PageHeader from "../components/PageHeader"
 import "../css/pages/clients.scss"
+import "../css/_base.scss"
 import { behanceClub, behanceDecalPHOTO } from '../utils/links'
 
 const serviceContent = [
@@ -36,9 +37,11 @@ function Services(props) {
   }
   return (
     <div className="g__flex__row service__row">
-      {props.content.map((service) => (
-        <ServiceWidget service={service} />
-      ))}
+      {/* <div className="service__row"> */}
+        {props.content.map((service) => (
+          <ServiceWidget service={service} />
+        ))}
+      {/* </div> */}
     </div>
   )
 }
@@ -135,7 +138,7 @@ export default function ClientPage() {
           photography, or web design project. Creative work is done pro bono for on campus student 
           organizations and university programs."
         />
-        <h1>Our services</h1>
+        <h2>Our services</h2>
         <Services content={serviceContent} />
       </div>
       <div className="process">

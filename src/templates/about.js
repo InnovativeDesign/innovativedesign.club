@@ -100,9 +100,9 @@ function Values(props) {
   }
   return (
     <div className="g__flex__row values">
-      {props.content.map((value) => (
-        <ValueItem value={value} />
-      ))}
+        {props.content.map((value) => (
+          <ValueItem value={value} />
+        ))}
     </div>
   )
 }
@@ -152,17 +152,17 @@ function Teams(props) {
     const team = props.team
     return (
       <div className="g__flex__row team__widget">
-        <div className="g__flex__col team__widget__col">
-          <h3>{team.title} {team.extra ? <h3 style={{ color: team.extraColor, display: "inline-block" }}> | {team.extra}</h3> : <h3></h3>}</h3>
-          <p>{team.description}</p>
-          <div className="team__widget__link__list">
-            <p className="g__ex__link apply__link">Applications open 2/1</p>
-            <a target="_blank" href="https://www.facebook.com/events/456309675369028" className="g__ex__link apply__link">Infosession &#x2192;</a>
-            {/* <a target="_blank" href={team.applyLink} className="g__ex__link apply__link">Apply &#x2192;</a>
-            <a target="_blank" href={team.requestLink} className="g__ex__link apply__link">Request services &#x2192;</a> */}
+          <div className="g__flex__col team__widget__col">
+            <h3>{team.title} {team.extra ? <h3 style={{ color: team.extraColor, display: "inline-block" }}> | {team.extra}</h3> : <h3></h3>}</h3>
+            <p>{team.description}</p>
+            <div className="team__widget__link__list">
+              <p className="g__ex__link apply__link">Applications open 2/1</p>
+              <a target="_blank" href="https://www.facebook.com/events/456309675369028" className="g__ex__link apply__link">Infosession &#x2192;</a>
+              {/* <a target="_blank" href={team.applyLink} className="g__ex__link apply__link">Apply &#x2192;</a>
+              <a target="_blank" href={team.requestLink} className="g__ex__link apply__link">Request services &#x2192;</a> */}
+            </div>
           </div>
-        </div>
-        <img className="team__img" src={team.img} />
+          <img className="team__img" src={team.img} />
       </div>
     )
   }
@@ -192,10 +192,10 @@ function Officers(props) {
   }
 
   return (
-    <div className="g__flex__row officers">
-      {props.content.map((officer) => (
-        <Officer officer={officer} />
-      ))}
+    <div className="officers g__flex__row">
+        {props.content.map((officer) => (
+          <Officer officer={officer} />
+        ))}
     </div>
   )
 }
