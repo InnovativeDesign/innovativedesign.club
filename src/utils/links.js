@@ -11,6 +11,9 @@ const applyRequest = ""
 
 const behanceClub = "https://www.behance.net/InnoD"
 const behanceDecal = "https://www.behance.net/innod-decal"
+const behanceDecalAI = "https://www.behance.net/collection/181699019/Intro-to-PSAI-DeCal"
+const behanceDecalGDP = "https://www.behance.net/innod-decal"
+const behanceDecalPHOTO = "https://www.behance.net/collection/181668183/Photography-Principles-DeCal"
 
 export { 
     applyClub, 
@@ -22,5 +25,8 @@ export {
     applyPartner, 
     applyRequest, 
     behanceClub, 
-    behanceDecal
+    behanceDecal,
+    behanceDecalAI,
+    behanceDecalGDP,
+    behanceDecalPHOTO,
 }

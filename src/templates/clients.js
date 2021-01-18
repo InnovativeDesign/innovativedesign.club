@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'gatsby-link'
 import PageHeader from "../components/PageHeader"
 import "../css/pages/clients.scss"
+import { behanceClub, behanceDecalPHOTO } from '../utils/links'
 
 const serviceContent = [
   {
@@ -47,7 +48,8 @@ const processContent = [
     num: "01",
     title: "Submit a design request",
     description: "The first part of the process is filling out the design request form where you will provide basic contact information, basic information about your organization, and a brief summary of your creative project.",
-    button: "View application"
+    // button: "View application",
+    // href: "",
   },
   {
     num: "02",
@@ -109,13 +111,14 @@ function ProcessList(props) {
   )
 }
 
+// TODO
 function PastList(props) {
   return (
     <div className="g__flex__row pic__list">
       {props.pics.map((pic) => (
-        <a href={pic.href}>
           <img src={pic.img} className="pic__img" />
-        </a>
+        // <a href={pic.href}>
+        // </a>
       ))}
     </div>
   )
@@ -143,7 +146,7 @@ export default function ClientPage() {
           title="Previous Work"
           description="Some of the branding, photography, and website design and development work for previous clients."
         />
-        <a className="g__ex__link view__projects" href="https://developer.mozilla.org/en-US/docs/web/javascript/reference/statements/export" target="_blank">View all projects &#x2192;</a>
+        <a className="g__ex__link view__projects" href={behanceClub} target="_blank">View all projects &#x2192;</a>
         <PastList pics={projectPics} />
       </div>
     </div>

@@ -146,6 +146,7 @@ const teamsContent = [
   },
 ]
 
+// TODO
 function Teams(props) {
   function Team(props) {
     const team = props.team
@@ -155,8 +156,10 @@ function Teams(props) {
           <h3>{team.title} {team.extra ? <h3 style={{ color: team.extraColor, display: "inline-block" }}> | {team.extra}</h3> : <h3></h3>}</h3>
           <p>{team.description}</p>
           <div className="team__widget__link__list">
-            <a href={team.applyLink} className="g__ex__link apply__link">Apply &#x2192;</a>
-            <a href={team.requestLink} className="g__ex__link apply__link">Request services &#x2192;</a>
+            <p className="g__ex__link apply__link">Applications open 2/1</p>
+            <a target="_blank" href="https://www.facebook.com/events/456309675369028" className="g__ex__link apply__link">Infosession &#x2192;</a>
+            {/* <a target="_blank" href={team.applyLink} className="g__ex__link apply__link">Apply &#x2192;</a>
+            <a target="_blank" href={team.requestLink} className="g__ex__link apply__link">Request services &#x2192;</a> */}
           </div>
         </div>
         <img className="team__img" src={team.img} />
@@ -173,7 +176,6 @@ function Teams(props) {
 }
 
 function Officers(props) {
-  console.log("wht rerender?")
 
   function Officer(props) {
     const officer = props.officer
@@ -220,7 +222,7 @@ export default function AboutPage(props) {
       <Values content={valuesContent} />
       <h2>Teams</h2>
       <Teams content={teamsContent} />
-      <h2>Officers</h2>
+      <h2 className="officer__TITLE__MEDIA">Officers</h2>
       < Officers content={officerContent} />
 
       {/* <div className="officer__container">

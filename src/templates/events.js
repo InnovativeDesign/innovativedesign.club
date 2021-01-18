@@ -60,7 +60,7 @@ export default function EventsPage(props) {
         That’s why we regularly host events to increase the number of design opportunities in our community."
       />
       <h2>Our events</h2>
-      <p>Looking to partner? <a className="g__ex__link lets__talk" target="_blank" href="">Lets talk &#x2192;</a></p>
+      {/* <p>Looking to partner? <a className="g__ex__link lets__talk" target="_blank" href="">Lets talk &#x2192;</a></p> */}
       <EventList content={eventContent}/>
     </div>
   )

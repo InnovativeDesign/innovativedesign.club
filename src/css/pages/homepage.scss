@@ -26,6 +26,15 @@ $pagecard-img-height: $global-max-width/3.8;
     width: 100%;
     background-color: #ddd7d2;
 
+    .section__one__hero {
+        max-width: 50%;
+        align-items: center;
+        z-index:1;
+        @media (max-width: 600px) {
+            max-width: 80%;
+        }
+    }
+
     .join__us__svg {
         max-width: $global-max-width/8;
         height: auto;
@@ -167,6 +176,9 @@ $pagecard-img-height: $global-max-width/3.8;
         }
     }
     .banner__row {
+        @media (max-width: 600px) {
+            display: none;
+        }
         justify-content: flex-start;
         gap: 50px;
     }
@@ -179,6 +191,9 @@ $pagecard-img-height: $global-max-width/3.8;
         will-change: color;
         &:hover {
             color: #f27459;
+        }
+        @media (max-width: 600px) {
+            font-size: 40px;
         }
     }
     .translate__y {

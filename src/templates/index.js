@@ -85,10 +85,11 @@ function SectionThree(props) {
   )
 }
 
+// TODO
 function SectionOne(props) {
   return (
     <div className="section__one">
-      <div className="g__flex__col" style={{ maxWidth: "50%", alignItems: "center", zIndex:"1", }}>
+      <div className="g__flex__col section__one__hero">
         <img className="join__us__svg" src="/img/homepage/front/join-us.svg" />
         <h2 style={{ fontFamily: "Sporting" }}>Lets make something together.</h2>
         <p>Innovative Design is UC Berkeley’s premier creative agency.
@@ -98,7 +99,7 @@ function SectionOne(props) {
 
       <div className="home__button__wrapper">
         <a className="home__button grey__sp21" href={behanceClub} target="_blank">See our work</a>
-        <a className="home__button blue__sp21" href={applyClub} target="_blank">Apply to join us</a>
+        <a className="home__button blue__sp21" href={"https://www.facebook.com/events/456309675369028"} target="_blank">Club Infosession</a>
       </div>
 
       <div className="graphics">

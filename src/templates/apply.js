@@ -30,18 +30,18 @@ export default function ApplyPage(props) {
       <PageHeader
         pageIndicator="Apply"
         title="We want you to join us"
-        description=""
+        description="Applications aren't open yet, but come to our infosessions for more info!"
       />
 
       <LinkRow
         title="For Students"
         links={[
-          { name: "Club", href: applyClub },
-          { name: "DeCal", href: applyDecal },
-          { name: "Extensions", href: applyExtensions },
+          { name: "Club infosession", href: "https://www.facebook.com/events/456309675369028" },
+          { name: "DeCal infosession", href: "https://www.facebook.com/events/904436096958179" },
+          // { name: "Extensions", href: applyExtensions },
         ]}
       />
-      <LinkRow
+      {/* <LinkRow
         title="For Organizations"
         links={[
           { name: "Partner", href: applyPartner },
@@ -52,7 +52,7 @@ export default function ApplyPage(props) {
         links={[
           { name: "Submit a request", href: applyRequest },
         ]}
-      />
+      /> */}
     </div>
   )
 }

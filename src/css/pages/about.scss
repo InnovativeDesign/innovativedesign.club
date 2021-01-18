@@ -50,11 +50,21 @@
     .team__img {
       object-fit: contain;
       flex: 1 1 0px;
-      // max-width: $global-max-width/2;
-      // height: auto;
-      max-height: $global-max-width/4;
-      width: auto;
+      // max-height: $global-max-width/4;
+      // width: auto;
+      max-width: $global-max-width/2.5;
+      height: auto;
+      @media (max-width: 600px) {
+        max-width: 100%;
+        height: auto;
+      }
     }
+  }
+}
+
+.officer__TITLE__MEDIA {
+  @media (max-width: 600px) {
+    display: none;
   }
 }
 
@@ -67,6 +77,9 @@
   overflow-x: hidden;
   text-align: center;
   gap: 1px;
+  @media (max-width: 600px) {
+    display: none !important;
+  }
   .officer__widget {
     gap: 10px;
 
