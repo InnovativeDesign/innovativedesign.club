@@ -1,9 +1,8 @@
 const applyClub = "https://css-tricks.com/snippets/css/a-guide-to-flexbox/"
-const applyDecal = "https://css-tricks.com/snippets/css/a-guide-to-flexbox/"
 
-const applyDecalAI = "https://css-tricks.com/snippets/css/a-guide-to-flexbox/"
-const applyDecalGDP = "https://css-tricks.com/snippets/css/a-guide-to-flexbox/"
-const applyDecalPHOTO = "https://css-tricks.com/snippets/css/a-guide-to-flexbox/"
+const applyDecalAI = "https://forms.gle/6T5KvmVfpxvBLpg88"
+const applyDecalGDP = "https://forms.gle/6oU7pc529kDuBhv79"
+const applyDecalPHOTO = "https://forms.gle/KkWxwigQdpbJmuiv8"
 
 const applyExtensions = ""
 const applyPartner = ""
@@ -17,7 +16,6 @@ const behanceDecalPHOTO = "https://www.behance.net/collection/181668183/Photogra
 
 export { 
     applyClub, 
-    applyDecal, 
     applyDecalAI,
     applyDecalGDP,
     applyDecalPHOTO,

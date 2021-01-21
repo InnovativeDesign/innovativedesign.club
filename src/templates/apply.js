@@ -2,7 +2,7 @@ import React from 'react';
 import PageHeader from '../components/PageHeader'
 import Link from 'gatsby-link'
 import '../css/pages/apply.scss'
-import { applyClub, applyDecal, applyExtensions, applyPartner, applyRequest } from '../utils/links'
+import { applyClub, applyExtensions, applyPartner, applyRequest } from '../utils/links'
 
 function LinkRow(props) {
   return (
