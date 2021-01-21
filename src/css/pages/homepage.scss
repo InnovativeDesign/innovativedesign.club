@@ -157,7 +157,7 @@ $pagecard-img-height: $global-max-width/3.8;
     transform: translateY(-100px);
     width: 2px;
     height: 200px;
-    background-color: #f27459;
+    background-color: $sp21orange;
 }
 
 .section__three {
@@ -172,7 +172,7 @@ $pagecard-img-height: $global-max-width/3.8;
         max-height: $pagecard-img-height;
         &:hover {
             // background-color: grey;
-            color: #f27459;
+            color: $sp21orange;
         }
     }
     .banner__row {
@@ -190,7 +190,7 @@ $pagecard-img-height: $global-max-width/3.8;
         transition: color ease-in 0.2s;
         will-change: color;
         &:hover {
-            color: #f27459;
+            color: $sp21orange;
         }
         @media (max-width: 600px) {
             font-size: 40px;

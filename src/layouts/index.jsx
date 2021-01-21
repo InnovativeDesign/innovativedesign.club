@@ -61,8 +61,13 @@ export default function RootLayout(props) {
             <link
               rel="icon"
               type="img/png"
-              href='/img/Logo.png'
+              href='/img/LogoTEAL.png'
             />
+            {/* <link
+              rel="icon"
+              type="img/png"
+              href='/img/LogoBLUE.png'
+            /> */}
             <link
               href='https://fonts.googleapis.com/css?family=Lato:400,400italic,700'
               rel='stylesheet'
