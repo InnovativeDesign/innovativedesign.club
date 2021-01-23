@@ -7,6 +7,7 @@ import '../css/pages/about.scss'
 import '../css/_base.scss'
 import { officerContent } from '../utils/aboutContent'
 import Img from 'gatsby-image'
+import { infoCLUB } from '../utils/links';
 
 const faqContent = [
   {
@@ -157,7 +158,7 @@ function Teams(props) {
             <p>{team.description}</p>
             <div className="team__widget__link__list">
               <p className="g__ex__link apply__link">Applications open 2/1</p>
-              <a target="_blank" href="https://www.facebook.com/events/456309675369028" className="g__ex__link apply__link">Infosession &#x2192;</a>
+              <a target="_blank" href={infoCLUB} className="g__ex__link apply__link">Infosession &#x2192;</a>
               {/* <a target="_blank" href={team.applyLink} className="g__ex__link apply__link">Apply &#x2192;</a>
               <a target="_blank" href={team.requestLink} className="g__ex__link apply__link">Request services &#x2192;</a> */}
             </div>

@@ -12,6 +12,27 @@ import { Helmet } from 'react-helmet';
     3. in templates, add the thing
  */
 
+// const PAGES = [
+// {
+//   name: 'About',
+//   slug: 'about'
+// }, {
+//   name: 'DeCals',
+//   slug: 'decals'
+// }, {
+//   name: 'Events',
+//   slug: 'events'
+// }, {
+//   name: 'Extensions',
+//   slug: 'extensions'
+// }, {
+//   name: 'Clients',
+//   slug: 'clients'
+// }, {
+//   name: 'Apply',
+//   slug: 'apply'
+// },
+// ];
 const PAGES = [
 {
   name: 'About',
@@ -23,11 +44,8 @@ const PAGES = [
   name: 'Events',
   slug: 'events'
 }, {
-  name: 'Extensions',
-  slug: 'extensions'
-}, {
-  name: 'Clients',
-  slug: 'clients'
+  name: 'Watch',
+  slug: 'watch'
 }, {
   name: 'Apply',
   slug: 'apply'

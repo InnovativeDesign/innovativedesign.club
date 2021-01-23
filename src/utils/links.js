@@ -14,6 +14,11 @@ const behanceDecalAI = "https://www.behance.net/collection/181699019/Intro-to-PS
 const behanceDecalGDP = "https://www.behance.net/innod-decal"
 const behanceDecalPHOTO = "https://www.behance.net/collection/181668183/Photography-Principles-DeCal"
 
+const liveDECAL = "https://youtu.be/jNHHT3cCBMg"
+
+const infoDECAL = "https://www.facebook.com/events/904436096958179"
+const infoCLUB = "https://www.facebook.com/events/456309675369028"
+
 export { 
     applyClub, 
     applyDecalAI,
@@ -27,4 +32,7 @@ export {
     behanceDecalAI,
     behanceDecalGDP,
     behanceDecalPHOTO,
+    liveDECAL,
+    infoDECAL,
+    infoCLUB,
 }

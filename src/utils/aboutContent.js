@@ -90,6 +90,12 @@ name: "Ryan Yu",
     img: "/img/about/officers-sp21/ryan.png",
 },
 {
+name: "Sophie Doucet",
+    position: "Intro DeCal Facilitator",
+    phrase: "I have a cat for each of my hands",
+    img: "img/about/officers-sp21/sophie.png",
+},
+{
 name: "Tucker Beachem",
 	position: "Gold Team Lead",
     phrase: "in my room",
@@ -114,10 +120,10 @@ name: "Megan Chai",
     img: "/img/about/officers-sp21/megan.png",
 },
 {
-name: "",
-	position: "",
-    phrase: "",
-    img: "",
+name: "Joshua Yao",
+	position: "Senior Advisor",
+    phrase: "baja'd his last blast",
+    img: "img/about/officers-sp21/josh.png",
 },
 ]
 

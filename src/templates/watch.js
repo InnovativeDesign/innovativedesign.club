@@ -1,60 +1,22 @@
 import React from 'react';
 import PageHeader from '../components/PageHeader'
+import {liveDECAL} from '../utils/links'
+import '../css/pages/watch.scss'
 
 export default function WatchPage(props) {
   return (
     <div className="g__page__wrapper">
-      <PageHeader 
+      <PageHeader
         pageIndicator="Watch"
-        title="Our past livestreams of events and workshops"
-        description="Content coming soon..."
+        title="Decal Infosession"
+        description="Watch the DeCal infosession here! Starting at 5pm PT"
       />
+      <div className="button__work">
+        <div className="home__button__wrapper">
+          {/* <a className="home__button grey__sp21" href={behanceClub} target="_blank">See our work</a> */}
+          <a className="home__button blue__sp21" href={liveDECAL} target="_blank">Watch DeCal Infosession</a>
+        </div>
+      </div>
     </div>
   )
 }
-
-// export default class WatchPage extends React.Component {
-
-//   render () {
-//     const {
-//       groups
-//     } = this.props.data.markdownRemark.frontmatter;
-
-//     return (
-//       <div className="watch">
-//         <Hero data={this.props.data} />
-//         <div className="apply">
-//           {groups.map(group => {
-//             let link = <a href={group.linked_page} target="__blank">{group.description}</a>;
-//             if (!group.linked_page) {
-//               link = <p>{group.description}</p>;
-//             }
-//             return (
-//               <div className="apply__section">
-//                 <h2>{group.heading}</h2>
-//                 {link}
-//               </div>
-//             );
-//           })}
-//         </div>
-//       </div>
-//     );
-//   }
-// }
-
-// export const pageQuery = graphql`
-//   query WatchQuery($path: String!) {
-//     markdownRemark(frontmatter: { path: { eq: $path } }) {
-//       html
-//       frontmatter {
-//         hero_heading
-//         hero_subheading
-//         groups {
-//           heading
-//           linked_page
-//           description
-//         }
-//       }
-//     }
-//   }
-// `;
