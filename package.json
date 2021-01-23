@@ -28,6 +28,7 @@
     "jquery": "^3.5.1",
     "js-yaml": "^3.14.1",
     "jss": "^9.8.7",
+    "livestreams": "^1.0.5",
     "lodash": "^4.17.20",
     "markdown-it": "^8.4.2",
     "markdown-it-abbr": "^1.0.3",
