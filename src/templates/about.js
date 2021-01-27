@@ -120,7 +120,7 @@ const teamsContent = [
   },
   {
     title: "Design",
-    description: "Our Blue Design Team designers work with off campus clients for industry level design work. This team provides branding packages and other design services to proffesional clients.",
+    description: "Our Blue Design Team designers work with off campus clients for industry level design work. This team provides branding packages and other design services to professional clients.",
     img: "/img/about/DESIGN-BLUE.jpg",
     extra: "Blue",
     extraColor: "#0038C9",
