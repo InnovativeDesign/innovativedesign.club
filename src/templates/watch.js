@@ -1,6 +1,6 @@
 import React from 'react';
 import PageHeader from '../components/PageHeader'
-import {liveDECAL} from '../utils/links'
+import {infoCLUB, liveCLUB, liveDECAL} from '../utils/links'
 import '../css/pages/watch.scss'
 import { Player, Chat } from 'livestreams';
 
@@ -15,7 +15,8 @@ export default function WatchPage(props) {
       <div className="button__work">
         <div className="home__button__wrapper">
           {/* <a className="home__button grey__sp21" href={behanceClub} target="_blank">See our work</a> */}
-          <a className="home__button blue__sp21" href={liveDECAL} target="_blank">Watch DeCal Infosession</a>
+          <a className="home__button grey__sp21" href={liveDECAL} target="_blank">Watch DeCal Infosession</a>
+          <a className="home__button blue__sp21" href={infoCLUB} target="_blank">Club Infosession</a>
         </div>
       </div>
       {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/yFC5y352RaM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

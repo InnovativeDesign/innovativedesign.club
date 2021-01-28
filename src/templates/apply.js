@@ -7,6 +7,12 @@ import { applyDecalAI, applyDecalGDP, applyDecalPHOTO, applyPartner, applyReques
 
 const applyContent = [
   {
+    title: "Club",
+    links: [
+      { name: "Infosession", href: infoCLUB},
+    ]
+  },
+  {
     title: "Decals",
     links: [
       { name: "Intro to Photoshop & Illustrator", href: applyDecalAI },
@@ -23,12 +29,6 @@ const applyContent = [
   //     { name: "Web", href:  },
   //   ]
   // },
-  {
-    title: "Club",
-    links: [
-      { name: "Infosession", href: infoCLUB},
-    ]
-  },
   // {
   //   title: "For Organizations",
   //   links: [

@@ -32,6 +32,14 @@
                     background-color: #002177;
                 }
             }
+            &.grey__sp21 {
+                color: black;
+                background-color: #eaeaea;
+                &:hover {
+                    text-decoration: none;
+                    background-color: #b6b6b6;
+                }
+            }
         }
     }
 }

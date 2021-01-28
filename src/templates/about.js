@@ -7,7 +7,7 @@ import '../css/pages/about.scss'
 import '../css/_base.scss'
 import { officerContent } from '../utils/aboutContent'
 import Img from 'gatsby-image'
-import { infoCLUB } from '../utils/links';
+import { applyClub_DESIGN_BLUE, applyClub_DESIGN_GOLD, applyClub_PHOTO, applyClub_WEB, applyRequest, infoCLUB, liveCLUB } from '../utils/links';
 
 const faqContent = [
   {
@@ -115,7 +115,7 @@ const teamsContent = [
     img: "/img/about/DESIGN-GOLD.png",
     extra: "Gold",
     extraColor: "#D4AF37",
-    applyLink: "",
+    applyLink: applyClub_DESIGN_GOLD,
     requestLink: "",
   },
   {
@@ -124,7 +124,7 @@ const teamsContent = [
     img: "/img/about/DESIGN-BLUE.jpg",
     extra: "Blue",
     extraColor: "#0038C9",
-    applyLink: "",
+    applyLink: applyClub_DESIGN_BLUE,
     requestLink: "",
   },
   {
@@ -133,7 +133,7 @@ const teamsContent = [
     img: "/img/about/PHOTO.jpg",
     extra: "",
     extraColor: "",
-    applyLink: "",
+    applyLink: applyClub_PHOTO,
     requestLink: "",
   },
   {
@@ -142,7 +142,7 @@ const teamsContent = [
     img: "/img/about/WEB.jpg",
     extra: "",
     extraColor: "",
-    applyLink: "",
+    applyLink: applyClub_WEB,
     requestLink: "",
   },
 ]
@@ -157,10 +157,13 @@ function Teams(props) {
             <h3>{team.title} {team.extra ? <h3 style={{ color: team.extraColor, display: "inline-block" }}> | {team.extra}</h3> : <h3></h3>}</h3>
             <p>{team.description}</p>
             <div className="team__widget__link__list">
-              <p className="g__ex__link apply__link">Applications open 2/1</p>
-              <a target="_blank" href={infoCLUB} className="g__ex__link apply__link">Infosession &#x2192;</a>
-              {/* <a target="_blank" href={team.applyLink} className="g__ex__link apply__link">Apply &#x2192;</a>
-              <a target="_blank" href={team.requestLink} className="g__ex__link apply__link">Request services &#x2192;</a> */}
+              {/* <p className="g__ex__link apply__link">Applications open 2/1</p> */}
+              <a target="_blank" href={infoCLUB} className="g__ex__link apply__link">Club infosessioin &#x2192;</a>
+              {/* {/* <a target="_blank" href={team.applyLink} className="g__ex__link apply__link">Apply &#x2192;</a> */}
+              {team.title === "Photo" ? 
+              <p>Photo is not taking requests this Spring</p> :
+              <a target="_blank" href={applyRequest} className="g__ex__link apply__link">Request services &#x2192;</a>
+              }
             </div>
           </div>
           <img className="team__img" src={team.img} />
