@@ -2,17 +2,19 @@ Updates needed for the website starting 1/26:
 To get ready for marketing drop #2 and club infosession
     Homepage
         [DONE] Change button to "Watch Club Infosession"
-        [] PUT LIVESTREAM LINK INTO "links.js"
+        [DONE] PUT LIVESTREAM LINK INTO "links.js"
     About
-        [] Under "Teams" Change "Infosession" to "Apply" and put due date
+        [DONE] Under "Teams" Change "Infosession" to "Apply" and put due date
         [] Fix mobile "Officers"
     Decals
-        [] Change "Apply" to "Applications closed!"
+        [DONE] Change "Apply" to "Applications closed!"
     Watch
-        [] Make into list of links, with "Watch Club Infosession" as emphasis
+        [DONE] Make into list of links, with "Watch Club Infosession" as emphasis
     Apply
-        [] Put club application links and remove decal links
+        [DONE] Put club application links and remove decal links
     Requests
-        [] Putting airtable links
+        [DONE] Putting airtable link
     NavBar
-        [] Adding "Requests"
+        [DONE] Adding "Requests"
+    links
+        [DONE] UPDATE APPLY LINKS

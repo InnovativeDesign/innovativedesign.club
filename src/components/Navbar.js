@@ -44,6 +44,10 @@ const PAGES = [
   name: 'Events',
   slug: 'events'
 }, {
+  name: 'Requests',
+  slug: 'requests'
+}, {
+}, {
   name: 'Watch',
   slug: 'watch'
 }, {

@@ -1,8 +1,8 @@
 const applyClub = "https://css-tricks.com/snippets/css/a-guide-to-flexbox/"
-const applyClub_DESIGN_GOLD = "https://forms.gle/6T5KvmVfpxvBLpg88"
-const applyClub_DESIGN_BLUE = "https://forms.gle/6T5KvmVfpxvBLpg88"
-const applyClub_PHOTO = "https://forms.gle/6T5KvmVfpxvBLpg88"
-const applyClub_WEB = "https://forms.gle/6T5KvmVfpxvBLpg88"
+const applyClub_DESIGN_GOLD = "https://airtable.com/shrXnLCMDrdZwOEji"
+const applyClub_DESIGN_BLUE = "https://airtable.com/shrGqnJyHmQHVDSu0"
+const applyClub_PHOTO = "https://airtable.com/shrPDLWCeA6MtcsCn"
+const applyClub_WEB = "https://airtable.com/shrhQ663ewSD2eIQi"
 
 const applyDecalAI = "https://forms.gle/6T5KvmVfpxvBLpg88"
 const applyDecalGDP = "https://forms.gle/6oU7pc529kDuBhv79"

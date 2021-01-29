@@ -157,9 +157,8 @@ function Teams(props) {
             <h3>{team.title} {team.extra ? <h3 style={{ color: team.extraColor, display: "inline-block" }}> | {team.extra}</h3> : <h3></h3>}</h3>
             <p>{team.description}</p>
             <div className="team__widget__link__list">
-              {/* <p className="g__ex__link apply__link">Applications open 2/1</p> */}
-              <a target="_blank" href={infoCLUB} className="g__ex__link apply__link">Club infosessioin &#x2192;</a>
-              {/* {/* <a target="_blank" href={team.applyLink} className="g__ex__link apply__link">Apply &#x2192;</a> */}
+              {/* <a target="_blank" href={infoCLUB} className="g__ex__link apply__link">Club infosession &#x2192;</a> */}
+              <a target="_blank" href={team.applyLink} className="g__ex__link apply__link">Apply &#x2192;</a>
               {team.title === "Photo" ? 
               <p>Photo is not taking requests this Spring</p> :
               <a target="_blank" href={applyRequest} className="g__ex__link apply__link">Request services &#x2192;</a>
@@ -217,86 +216,66 @@ export default function AboutPage(props) {
     <div className="about">
       <PageHeader
         pageIndicator="About"
-        title="Leadership"
+        title="We have 4 teams!"
         description="Our club and DeCals are led by the Officer Board. 
           Each VP presides over an aspect of our club’s operation in addition to leading a 
           Design or Photography team."
       />
-      <h2>Values</h2>
-      <Values content={valuesContent} />
       <h2>Teams</h2>
       <Teams content={teamsContent} />
+      <h2>Values</h2>
+      <Values content={valuesContent} />
       <h2 className="officer__TITLE__MEDIA">Officers</h2>
       < Officers content={officerContent} />
-
-      {/* <div className="officer__container">
-        {officers.map((officer) => {
-          const originalName = officer.image.substring(officer.image.lastIndexOf('/') + 1);
-          return (<Officer
-            info={officer}
-            image={images[originalName]}
-          />);
-        })}
-        {
-          Array(6 - officers.length % 6).fill(0).map(() =>
-            <div className="officer__block officer__block-empty" />
-          )
-        }
-      </div> */}
       <h2>FAQ</h2>
-      {/* <div className="g__flex__col">
-        {faqContent.map((faq) => (
-          <FAQuestion faq={faq} />
-        ))}
-      </div> */}
       <FAQ content={faqContent} />
 
     </div>
   );
 }
 
-export const pageQuery = graphql`
-  query AboutQuery($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
-      html
-      frontmatter {
-        hero_heading
-        hero_subheading
-        officers {
-          name
-          role
-          secondary_role
-          image
-          hover_blurb
-        }
-      }
-    }
-    allFile {
-      edges {
-        node {
-          childImageSharp {
-            resolutions(
-              traceSVG: {
-                color: "lightgray"
-                optTolerance: 0.4
-                turdSize: 100
-                turnPolicy: TURNPOLICY_MAJORITY
-              },
-              width: 150,
-              height: 219,
-              quality: 100,
-              cropFocus: CENTER
-            ) {
-              width
-              height
-              src
-              srcSet
-              tracedSVG
-              originalName
-            }
-          }
-        }
-      }
-    }
-  }
-`;
+// export const pageQuery = graphql`
+//   query AboutQuery($path: String!) {
+//     markdownRemark(frontmatter: { path: { eq: $path } }) {
+//       html
+//       frontmatter {
+//         hero_heading
+//         hero_subheading
+//         officers {
+//           name
+//           role
+//           secondary_role
+//           image
+//           hover_blurb
+//         }
+//       }
+//     }
+//     allFile {
+//       edges {
+//         node {
+//           childImageSharp {
+//             resolutions(
+//               traceSVG: {
+//                 color: "lightgray"
+//                 optTolerance: 0.4
+//                 turdSize: 100
+//                 turnPolicy: TURNPOLICY_MAJORITY
+//               },
+//               width: 150,
+//               height: 219,
+//               quality: 100,
+//               cropFocus: CENTER
+//             ) {
+//               width
+//               height
+//               src
+//               srcSet
+//               tracedSVG
+//               originalName
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// `;

@@ -2,45 +2,46 @@ import React from 'react';
 import PageHeader from '../components/PageHeader'
 import Link from 'gatsby-link'
 import '../css/pages/apply.scss'
-import { applyDecalAI, applyDecalGDP, applyDecalPHOTO, applyPartner, applyRequest, infoCLUB } from '../utils/links'
+import { applyClub_DESIGN_BLUE, applyClub_DESIGN_GOLD, applyClub_PHOTO, applyClub_WEB, applyDecalAI, applyDecalGDP, applyDecalPHOTO, applyPartner, applyRequest, infoCLUB } from '../utils/links'
 
 
 const applyContent = [
+  // {
+  //   title: "Club",
+  //   links: [
+  //     { name: "Infosession", href: infoCLUB},
+  //   ]
+  // },
+  // {
+  //   title: "Decals",
+  //   links: [
+  //     { name: "Intro to Photoshop & Illustrator", href: applyDecalAI },
+  //     { name: "Graphic Design Principles", href: applyDecalGDP },
+  //     { name: "Photography Principles", href: applyDecalPHOTO },
+  //   ]
+  // },
   {
     title: "Club",
     links: [
       { name: "Infosession", href: infoCLUB},
+      { name: "Design: Blue", href:  applyClub_DESIGN_BLUE},
+      { name: "Design: Gold", href:  applyClub_DESIGN_GOLD},
+      { name: "Photo", href:  applyClub_PHOTO},
+      { name: "Web", href:  applyClub_WEB},
     ]
   },
-  {
-    title: "Decals",
-    links: [
-      { name: "Intro to Photoshop & Illustrator", href: applyDecalAI },
-      { name: "Graphic Design Principles", href: applyDecalGDP },
-      { name: "Photography Principles", href: applyDecalPHOTO },
-    ]
-  },
-  // {
-  //   title: "Club",
-  //   links: [
-  //     { name: "Design: Blue", href:  },
-  //     { name: "Design: Gold", href:  },
-  //     { name: "Photo", href:  },
-  //     { name: "Web", href:  },
-  //   ]
-  // },
   // {
   //   title: "For Organizations",
   //   links: [
   //     { name: "Partner", href: applyPartner },
   //   ]
   // },
-  // {
-  //   title: "For Clients",
-  //   links: [
-  //     { name: "Submit a request", href: applyRequest },
-  //   ]
-  // },
+  {
+    title: "For Clients",
+    links: [
+      { name: "Submit a request", href: applyRequest },
+    ]
+  },
 ]
 
 function Apply(props) {
@@ -81,7 +82,7 @@ export default function ApplyPage(props) {
       <PageHeader
         pageIndicator="Apply"
         title="We want you to join us"
-        description="DeCal applications are open! All are due 1/29 at 11:59pm PT. Club applications not open yet, check back 2/2"
+        description="Blue and Web due 2/4 at 11:59pm PT. Gold and Photo due 2/5 at 11:59pm PT. "
       />
       <Apply content={applyContent}/>
     </div>

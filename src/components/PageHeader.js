@@ -8,7 +8,7 @@ export default function PageHeader(props) {
     return (
         <div className="page__wrapper">
             <div className="page__indicator">{props.pageIndicator}</div>
-            <div className="g__flex__row">
+            <div className="g__flex__row page__content__wrapper">
                 <h2 className="page__title">{props.title}</h2>
                 <p className="page__description">{props.description}</p>
             </div>

@@ -2,7 +2,8 @@ import React from 'react';
 import Link from 'gatsby-link'
 import '../css/pages/homepage.scss'
 import FloatIn from '../components/FloatIn'
-import { applyClub, behanceClub, infoCLUB, liveCLUB, liveDECAL } from '../utils/links'
+import { applyClub, applyRequest, behanceClub, infoCLUB, liveCLUB, liveDECAL } from '../utils/links'
+import Button from '../components/Button';
 
 const floatContent = [
   [{ content: "Calling", dir: "left" }, { content: "/img/homepage/CALLING-ALL.png", dir: "bottom" }, { content: "all", dir: "right" }],
@@ -100,8 +101,10 @@ function SectionOne(props) {
       <div className="home__button__wrapper">
         {/* <a className="home__button blue__sp21" href={liveDECAL} target="_blank">Watch DeCal Infosession</a> */}
         {/* <a className="home__button grey__sp21" href={behanceClub} target="_blank">See our work</a> */}
-        <a className="home__button grey__sp21" href={liveDECAL} target="_blank">Watch DeCal Infosession</a>
-        <a className="home__button blue__sp21" href={infoCLUB} target="_blank">Club Infosession</a>
+        {/* <a className="home__button grey__sp21" href={liveDECAL} target="_blank">Watch DeCal Infosession</a>
+        <a className="home__button blue__sp21" href={infoCLUB} target="_blank">Club Infosession</a> */}
+        <Button color="grey" href={applyRequest}>Request services</Button>
+        <Button color="blue" href={infoCLUB}>Club Infosession</Button>
       </div>
 
       <div className="graphics">

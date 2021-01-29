@@ -1,0 +1,29 @@
+@import '../variables';
+.button {
+    margin: 10px;
+    padding: 15px 30px;
+    border-radius: 3px;
+    text-decoration: none;
+    transition: 0.2s ease all;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: white;
+    background-color: $sp21blue;
+
+    &.blue__sp21 {
+        color: white;
+        background-color: $sp21blue;
+        &:hover {
+            text-decoration: none;
+            background-color: #002177;
+        }
+    }
+    &.grey__sp21 {
+        color: black;
+        background-color: #eaeaea;
+        &:hover {
+            text-decoration: none;
+            background-color: #b6b6b6;
+        }
+    }
+}

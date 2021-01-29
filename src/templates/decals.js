@@ -43,7 +43,8 @@ function Widget(props) {
         <h4 style={{minHeight: "2.5em"}}>{widget.title}</h4>
         <p style={{minHeight:"17em"}}>{widget.description}</p>
         {/* <a href={widget.apply} className="g__ex__link" target="_blank" style={{color: "black"}}>Apply &#x2192;</a> */}
-        <a href={widget.apply} className="g__ex__link" target="_blank" style={{color: "black"}}>Apply &#x2192;</a>
+        {/* <a href={widget.apply} className="g__ex__link" target="_blank" style={{color: "black"}}>Apply &#x2192;</a> */}
+        <a target="_blank" style={{color: "black"}}>Applications closed!</a>
       </div>
     </a>
   )
