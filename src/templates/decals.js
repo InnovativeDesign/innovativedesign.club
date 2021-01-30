@@ -7,7 +7,7 @@ const widgetContent = [
   {          
     title: "Intro to Photoshop & Illustrator",
     src: "/img/decal/Photoshop-Decal.png",
-    description: "In this class we teach the basics of how to use Adobe Illustrator and Photoshop. Don’t have it? Don’t worry! As a UC Berkeley student you have access to it for free. We also touch on the basics of graphic design and branding.",
+    description: "In this class we teach the basics of how to use Adobe Illustrator and Photoshop. Don’t have it? Don’t worry! As a UC Berkeley student you have access to it for free. We also touch on the basics of graphic design and branding. ",
     behance: behanceDecalAI,
     apply: applyDecalAI,
   },
