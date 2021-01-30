@@ -15,7 +15,7 @@ export default function WatchPage(props) {
       />
       <div className="watch__button__wrapper">
         <Button color="grey" href={liveDECAL}>Watch DeCal Infosession</Button>
-        <Button color="blue" href={liveCLUB}>Watch Club Infosession</Button>
+        <Button color="blue" href={infoCLUB}>Club Infosession</Button>
       </div>
     </div>
   )
