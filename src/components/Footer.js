@@ -51,7 +51,7 @@ export default function Footer() {
             { name: "About", slug: "about" },
             { name: "Events", slug: "events" },
             { name: "DeCals", slug: "decals" },
-            { name: "Chapters", slug: "chapters" },
+            { name: "Extensions", slug: "extensions" },
           ]}
         />
         {/* ORGS 4 */}
