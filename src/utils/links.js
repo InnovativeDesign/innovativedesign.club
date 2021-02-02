@@ -19,7 +19,7 @@ const behanceDecalGDP = "https://www.behance.net/innod-decal"
 const behanceDecalPHOTO = "https://www.behance.net/collection/181668183/Photography-Principles-DeCal"
 
 const liveDECAL = "https://youtu.be/jNHHT3cCBMg"
-const liveCLUB = "https://berkeley.zoom.us/j/99120552165"
+const liveCLUB = "https://youtu.be/ixhMHLEeFlM"
 
 const infoDECAL = "https://www.facebook.com/events/904436096958179"
 const infoCLUB = "https://www.facebook.com/events/456309675369028"
