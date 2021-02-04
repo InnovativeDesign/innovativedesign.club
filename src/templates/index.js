@@ -105,6 +105,7 @@ function SectionOne(props) {
         <a className="home__button blue__sp21" href={infoCLUB} target="_blank">Club Infosession</a> */}
         <Button color="grey" href={applyRequest}>Request services</Button>
         <Button color="blue" href={liveCLUB}>Watch Club Infosession</Button>
+        <Button color="blue" href={"https://www.notion.so/Innovative-Design-Virtual-Office-Hours-60d0686f256e4beca958ed3cda7e4462"}>Office hours</Button>
       </div>
 
       <div className="graphics">
