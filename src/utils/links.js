@@ -15,7 +15,7 @@ const applyRequest = "https://airtable.com/shrBkN86t2gcV8FGr"
 const behanceClub = "https://www.behance.net/InnoD"
 const behanceDecal = "https://www.behance.net/innod-decal"
 const behanceDecalAI = "https://www.behance.net/collection/181699019/Intro-to-PSAI-DeCal"
-const behanceDecalGDP = "https://www.behance.net/innod-decal"
+const behanceDecalGDP = "https://www.behance.net/collection/182173027/Graphic-Design-Principles-DeCal"
 const behanceDecalPHOTO = "https://www.behance.net/collection/181668183/Photography-Principles-DeCal"
 
 const liveDECAL = "https://youtu.be/jNHHT3cCBMg"
