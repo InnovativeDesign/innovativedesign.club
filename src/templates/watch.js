@@ -11,11 +11,11 @@ export default function WatchPage(props) {
       <PageHeader
         pageIndicator="Watch"
         title="Club Infosession"
-        description="Watch the Club infosession here! Starting at 2/1 8:30pm PT"
+        description="Future livestreams will be posted here. Both club and decal applications have closed, check back next semester!"
       />
       <div className="watch__button__wrapper">
         <Button color="grey" href={liveDECAL}>Watch DeCal Infosession</Button>
-        <Button color="blue" href={liveCLUB}>Watch Club Infosession</Button>
+        <Button color="grey" href={liveCLUB}>Watch Club Infosession</Button>
       </div>
     </div>
   )

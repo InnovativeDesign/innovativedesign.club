@@ -20,16 +20,16 @@ const applyContent = [
   //     { name: "Photography Principles", href: applyDecalPHOTO },
   //   ]
   // },
-  {
-    title: "Club",
-    links: [
-      { name: "Infosession", href: infoCLUB},
-      { name: "Design: Blue", href:  applyClub_DESIGN_BLUE},
-      { name: "Design: Gold", href:  applyClub_DESIGN_GOLD},
-      { name: "Photo", href:  applyClub_PHOTO},
-      { name: "Web", href:  applyClub_WEB},
-    ]
-  },
+  // {
+  //   title: "Club",
+  //   links: [
+  //     { name: "Infosession", href: infoCLUB},
+  //     { name: "Design: Blue", href:  applyClub_DESIGN_BLUE},
+  //     { name: "Design: Gold", href:  applyClub_DESIGN_GOLD},
+  //     { name: "Photo", href:  applyClub_PHOTO},
+  //     { name: "Web", href:  applyClub_WEB},
+  //   ]
+  // },
   // {
   //   title: "For Organizations",
   //   links: [
@@ -82,7 +82,7 @@ export default function ApplyPage(props) {
       <PageHeader
         pageIndicator="Apply"
         title="We want you to join us"
-        description="Blue and Web due 2/4 at 11:59pm PT. Gold and Photo due 2/5 at 11:59pm PT. "
+        description="Club applications have closed. We are still accepting client and partnership requests!"
       />
       <Apply content={applyContent}/>
     </div>
