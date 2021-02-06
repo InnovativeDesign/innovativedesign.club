@@ -48,8 +48,8 @@ const PAGES = [
   slug: 'requests'
 }, {
 }, {
-  name: 'Watch',
-  slug: 'watch'
+  name: 'Clients',
+  slug: 'clients'
 }, {
   name: 'Apply',
   slug: 'apply'
