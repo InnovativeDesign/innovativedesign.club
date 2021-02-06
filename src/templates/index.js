@@ -103,9 +103,10 @@ function SectionOne(props) {
         {/* <a className="home__button grey__sp21" href={behanceClub} target="_blank">See our work</a> */}
         {/* <a className="home__button grey__sp21" href={liveDECAL} target="_blank">Watch DeCal Infosession</a>
         <a className="home__button blue__sp21" href={infoCLUB} target="_blank">Club Infosession</a> */}
-        <Button color="grey" href={applyRequest}>Request services</Button>
-        <Button color="blue" href={liveCLUB}>Watch Club Infosession</Button>
-        <Button color="blue" href={"https://www.notion.so/Innovative-Design-Virtual-Office-Hours-60d0686f256e4beca958ed3cda7e4462"}>Office hours</Button>
+        <Button color="grey" href={behanceClub}>See our work</Button>
+        <Button color="blue" href={applyRequest}>Request services</Button>
+        {/* <Button color="blue" href={liveCLUB}>Watch Club Infosession</Button>
+        <Button color="blue" href={"https://www.notion.so/Innovative-Design-Virtual-Office-Hours-60d0686f256e4beca958ed3cda7e4462"}>Office hours</Button> */}
       </div>
 
       <div className="graphics">
