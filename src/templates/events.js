@@ -4,18 +4,18 @@ import "../css/pages/events.scss"
 
 const eventContent = [
   {
-    title: "RGB: Reach, Grow, Build",
-    img:"/img/events/RGB-IMG.png",
-    description: "RGB 2021 will be a virtual event, and we'll be joined by speakers whose careers have taken them to Spotify, the New York Times, and beyond!",
-    date: "Date: 3/13/21, 1-4pm PT",
-    href: "https://rgb.innovativedesign.club/"
-  },
-  {
     title: "HEX: Hone & Explore", 
     img:"/img/events/HEX-IMG.png", 
     description: "A weekend of free, virtual workshops where students can learn various creative skills.",
-    date: "Date: TBD",
+    date: "Date: 4/10 - 4/11, 11am - 3pm PST",
     href: "https://hex.innovativedesign.club/"
+  },
+  {
+    title: "RGB: Reach, Grow, Build",
+    img:"/img/events/RGB-IMG.png",
+    description: "RGB 2021 will be a virtual event, and we'll be joined by speakers whose careers have taken them to Spotify, the New York Times, and beyond!",
+    date: "Date: 3/13, 1-4pm PT",
+    href: "https://rgb.innovativedesign.club/"
   },
   {
     title: "CMYK: Come Make Your Mark",
