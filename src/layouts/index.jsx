@@ -58,16 +58,16 @@ export default function RootLayout(props) {
               property="og:url"
               content="http://innovativedesign.club"
             />
-            {/* <link
-              rel="icon"
-              type="img/png"
-              href='/img/LogoTEAL.png'
-            /> */}
             <link
               rel="icon"
               type="img/png"
-              href='/img/LogoBLUE.png'
+              href='/img/LogoTEAL.png'
             />
+            {/* <link
+              rel="icon"
+              type="img/png"
+              href='/img/LogoBLUE.png'
+            /> */}
             <link
               href='https://fonts.googleapis.com/css?family=Lato:400,400italic,700'
               rel='stylesheet'
