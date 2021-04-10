@@ -51,8 +51,8 @@ const PAGES = [
   name: 'Clients',
   slug: 'clients'
 }, {
-  name: 'Apply',
-  slug: 'apply'
+  name: 'Watch',
+  slug: 'watch'
 },
 ];
 
