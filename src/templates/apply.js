@@ -30,12 +30,13 @@ const applyContent = [
   //     { name: "Web", href:  applyClub_WEB},
   //   ]
   // },
-  // {
-  //   title: "For Organizations",
-  //   links: [
-  //     { name: "Partner", href: applyPartner },
-  //   ]
-  // },
+  {
+    title: "For Leadership",
+    links: [
+      { name: "Officer", href: "https://airtable.com/shrVvFc9tjazogWQU" },
+      { name: "Advisor", href: "https://airtable.com/shrx7UZMI3orEgOWv" },
+    ]
+  },
   {
     title: "For Clients",
     links: [
