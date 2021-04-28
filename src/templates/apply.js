@@ -83,7 +83,7 @@ export default function ApplyPage(props) {
       <PageHeader
         pageIndicator="Apply"
         title="We want you to join us"
-        description="Club applications have closed. We are still accepting client and partnership requests!"
+        description="Apply to be an officer or advisor!"
       />
       <Apply content={applyContent}/>
     </div>
