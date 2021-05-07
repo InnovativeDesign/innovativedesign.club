@@ -29,7 +29,7 @@
     "js-yaml": "^3.14.1",
     "jss": "^9.8.7",
     "livestreams": "^1.0.5",
-    "lodash": "^4.17.20",
+    "lodash": "^4.17.21",
     "markdown-it": "^8.4.2",
     "markdown-it-abbr": "^1.0.3",
     "markdown-it-attrs": "^1.2.1",
